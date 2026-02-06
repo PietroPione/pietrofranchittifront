@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-sans: "Roboto mono", sans-serif;
+  --background: #ffffff;
+  --foreground: #171717;
+  --starwars-yellow: #FFE81F;
+  --dark-gray: #1A1A1A;
+  --light-gray: #54595F;
+
+  --text-10: 0.65rem;
+  --text-12: 0.75rem;
+  --text-14: 0.875rem;
+  --text-16: 1.0rem;
+  --text-18: 1.125rem;
+  --text-20: 1.250rem;
+  --text-22: 1.375rem;
+  --text-26: 1.625rem;
+  --text-32: 2rem;
+  --text-36: 2.25rem;
+  --text-40: 2.5rem;
+  --text-46: 2.875rem;
+  --text-60: 3.75rem;
+  --text-75: 4.688rem;
+  --text-95: 5.938rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  @apply h-full w-full bg-white dark:bg-black ;
+  scroll-padding-top: 5rem;
+  font-size: 0.875rem;
+}
+
+body {
+ 
+  background: inherit;
+  font-family: var(--font-sans);
+  @apply min-h-full selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+}
+
+@layer utilities {
+  .max-w-container {
+    max-width: 1280px;
+  }
+
+  .text-gray-light {
+    color: #54595F;
+  }
+
+  .bg-starwars-yellow {
+    background-color: var(--starwars-yellow);
+  }
+
+  .bg-dark-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .bg-light-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .dark\:bg-light-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .hover\:dark\:bg-light-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .dark\:bg-dark-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .text-starwars-yellow {
+    color: var(--starwars-yellow);
+  }
+
+  .text-dark-gray {
+    color: var(--dark-gray);
+  }
+
+  
+
+  .border-starwars-yellow {
+    border-color: var(--starwars-yellow);
+  }
+
+  .border-starwars-yellow {
+    border-bottom-color: var(--starwars-yellow);
+  }
+
+  .selection\:bg-starwars-yellow::selection {
+    background-color: var(--starwars-yellow);
+  }
+
+  .text-10 {
+    font-size: var(--text-10);
+  }
+  .text-12 {
+    font-size: var(--text-12);
+  }
+  .text-14 {
+    font-size: var(--text-14);
+  }
+  .text-16 {
+    font-size: var(--text-16);
+  }
+  .text-18 {
+    font-size: var(--text-18);
+  }
+  .text-20 {
+    font-size: var(--text-20);
+  }
+  .text-22 {
+    font-size: var(--text-22);
+  }
+  .text-26 {
+    font-size: var(--text-26);
+  }
+  .text-32 {
+    font-size: var(--text-32);
+  }
+  .text-36 {
+    font-size: var(--text-36);
+  }
+  .text-40 {
+    font-size: var(--text-40);
+  }
+  .text-46 {
+    font-size: var(--text-46);
+  }
+  .text-60 {
+    font-size: var(--text-60);
+  }
+  .text-75 {
+    font-size: var(--text-75);
+  }
+  .text-95 {
+    font-size: var(--text-95);
+  }
+
+  .font-space-grotesk {
+    font-family: var(--font-space-grotesk);
+  }
+
+  .sticky-top {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white; 
+    z-index: 10; 
+  }
+  .button-shadow {
+    box-shadow:
+      1px 1px 0px 0px,
+      2px 2px 0px 0px,
+      3px 3px 0px 0px,
+      4px 4px 0px 0px,
+      5px 5px 0px 0px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .md\:text-22 {
+    font-size: var(--text-22);
+  }
+
+  .md\:text-26 {
+    font-size: var(--text-26);
+  }
+  .md\:text-32 {
+    font-size: var(--text-32);
+  }
+  .md\:text-36 {
+    font-size: var(--text-36);
+  }
+  .md\:text-46 {
+    font-size: var(--text-46);
+  }
+  .md\:text-60 {
+    font-size: var(--text-60);
+  }
+  .md\:text-75 {
+    font-size: var(--text-75);
+  }
+  .md\:text-95 {
+    font-size: var(--text-95);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-26 {
+    font-size: var(--text-26);
+  }
+  .lg\:text-36 {
+    font-size: var(--text-36);
+  }
+  .lg\:text-75 {
+    font-size: var(--text-75);
+  }
+  .lg\:text-22 {
+    font-size: var(--text-22);
+  }
+  .lg\:text-46 {
+    font-size: var(--text-46);
+  }
+  .lg\:text-60 {
+    font-size: var(--text-60);
+  }
+  
+  .lg\:text-95 {
+    font-size: var(--text-95);
+  }
+}
+
+
+@utility container {
+  @apply mx-auto w-full px-4;
+  max-width: 90vw;
+  @variant md {
+  }
+}
+
+@utility container-unset {
+  max-width: unset;
+  width: unset;
+  padding-inline: unset;
+  margin-inline: unset;
+  @variant md {
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 90vw;
+  }
+}

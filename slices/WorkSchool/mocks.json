@@ -1,0 +1,153 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "tried",
+				"type": "Text"
+			},
+			"work_title": {
+				"__TYPE__": "FieldContent",
+				"value": "difficulty",
+				"type": "Text"
+			},
+			"work_copy": {
+				"__TYPE__": "FieldContent",
+				"value": "country",
+				"type": "Text"
+			},
+			"works": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"work_position",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sky",
+									"type": "Text"
+								}
+							],
+							[
+								"dove",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "driver",
+									"type": "Text"
+								}
+							],
+							[
+								"periodo",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "just",
+									"type": "Text"
+								}
+							],
+							[
+								"attuale",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							]
+						]
+					}
+				]
+			},
+			"study_title": {
+				"__TYPE__": "FieldContent",
+				"value": "take",
+				"type": "Text"
+			},
+			"study_copy": {
+				"__TYPE__": "FieldContent",
+				"value": "above",
+				"type": "Text"
+			},
+			"studies": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_corso",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "report",
+									"type": "Text"
+								}
+							],
+							[
+								"dove",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "planet",
+									"type": "Text"
+								}
+							],
+							[
+								"periodo",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "exciting",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"titolo_certificazioni": {
+				"__TYPE__": "FieldContent",
+				"value": "call",
+				"type": "Text"
+			},
+			"copy_certificazioni": {
+				"__TYPE__": "FieldContent",
+				"value": "continent",
+				"type": "Text"
+			},
+			"certificazioni": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_certificazione",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "entire",
+									"type": "Text"
+								}
+							],
+							[
+								"dove",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "memory",
+									"type": "Text"
+								}
+							],
+							[
+								"quando",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "its",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

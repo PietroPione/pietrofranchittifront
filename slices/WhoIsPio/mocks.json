@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titolo": {
+				"__TYPE__": "FieldContent",
+				"value": "wealth",
+				"type": "Text"
+			},
+			"testo": {
+				"__TYPE__": "FieldContent",
+				"value": "directly",
+				"type": "Text"
+			},
+			"immagine": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+					"width": 4480,
+					"height": 4480
+				},
+				"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+				"width": 4480,
+				"height": 4480,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "folks",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"testo_tasto": {
+				"__TYPE__": "FieldContent",
+				"value": "habit",
+				"type": "Text"
+			},
+			"link_tasto": {
+				"__TYPE__": "LinkContent",
+				"key": "f6c55db8-aa1f-419d-aaa6-ca5c2d4c25d1",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "her"
+				}
+			}
+		},
+		"items": []
+	}
+]

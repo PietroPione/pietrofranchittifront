@@ -1,0 +1,74 @@
+{
+  "id": "bio_falsa",
+  "type": "SharedSlice",
+  "name": "BioFalsa",
+  "description": "BioFalsa",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bio": {
+          "type": "Group",
+          "config": {
+            "label": "Bio",
+            "repeat": true,
+            "fields": {
+              "frase": {
+                "type": "Text",
+                "config": {
+                  "label": "Frase",
+                  "placeholder": ""
+                }
+              },
+              "accento": {
+                "type": "Text",
+                "config": {
+                  "label": "Accento",
+                  "placeholder": ""
+                }
+              },
+              "punto_dopo": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Punto dopo",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        },
+        "keep_scrolling": {
+          "type": "Text",
+          "config": {
+            "label": "Keep scrolling",
+            "placeholder": ""
+          }
+        },
+        "fotofalsabuona": {
+          "type": "Image",
+          "config": {
+            "label": "FotoFalsaBuona",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "fotofalsacattiva": {
+          "type": "Image",
+          "config": {
+            "label": "FotoFalsaCattiva",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

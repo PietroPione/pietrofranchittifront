@@ -1,0 +1,108 @@
+{
+  "id": "contatti_h",
+  "type": "SharedSlice",
+  "name": "Contatti",
+  "description": "ContattiH",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo_contatti": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo contatti",
+            "placeholder": ""
+          }
+        },
+        "copy_contatti": {
+          "type": "Text",
+          "config": {
+            "label": "Copy contatti",
+            "placeholder": ""
+          }
+        },
+        "titolo_mail": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo mail",
+            "placeholder": ""
+          }
+        },
+        "mail": {
+          "type": "Text",
+          "config": {
+            "label": "Mail",
+            "placeholder": ""
+          }
+        },
+        "link_mail": {
+          "type": "Link",
+          "config": {
+            "label": "Link mail",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "titolo_luogo": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo luogo",
+            "placeholder": ""
+          }
+        },
+        "testo_luogo": {
+          "type": "Text",
+          "config": {
+            "label": "Testo luogo",
+            "placeholder": ""
+          }
+        },
+        "quote_contatti": {
+          "type": "Text",
+          "config": {
+            "label": "Quote contatti",
+            "placeholder": ""
+          }
+        },
+        "autore_quote": {
+          "type": "Text",
+          "config": {
+            "label": "Autore quote",
+            "placeholder": ""
+          }
+        },
+        "immagine_contatti": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine contatti",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "info_sito": {
+          "type": "Text",
+          "config": {
+            "label": "Info sito",
+            "placeholder": ""
+          }
+        },
+        "testo_tasto_scopri": {
+          "type": "Text",
+          "config": {
+            "label": "Testo tasto scopri",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

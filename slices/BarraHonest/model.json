@@ -1,0 +1,26 @@
+{
+  "id": "barra_honest",
+  "type": "SharedSlice",
+  "name": "BarraHonest",
+  "description": "BarraHonest",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "testohonest": {
+          "type": "Text",
+          "config": {
+            "label": "TestoHonest",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

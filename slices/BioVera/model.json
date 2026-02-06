@@ -1,0 +1,98 @@
+{
+  "id": "bio_vera",
+  "type": "SharedSlice",
+  "name": "BioVera",
+  "description": "BioVera",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bio": {
+          "type": "Group",
+          "config": {
+            "label": "Bio",
+            "repeat": true,
+            "fields": {
+              "frase": {
+                "type": "Text",
+                "config": {
+                  "label": "Frase",
+                  "placeholder": ""
+                }
+              },
+              "accento": {
+                "type": "Text",
+                "config": {
+                  "label": "Accento",
+                  "placeholder": ""
+                }
+              },
+              "punto_dopo": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Punto dopo",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        },
+        "foto_buona": {
+          "type": "Image",
+          "config": {
+            "label": "Foto Buona",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "foto_gatti_1": {
+          "type": "Image",
+          "config": {
+            "label": "Foto gatti 1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "foto_gatti_2": {
+          "type": "Image",
+          "config": {
+            "label": "Foto gatti 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "foto_gatti_3": {
+          "type": "Image",
+          "config": {
+            "label": "Foto gatti 3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "foto_gatti_4": {
+          "type": "Image",
+          "config": {
+            "label": "Foto gatti 4",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "testo_gatti": {
+          "type": "Text",
+          "config": {
+            "label": "Testo gatti",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

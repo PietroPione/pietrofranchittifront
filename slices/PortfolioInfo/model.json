@@ -1,0 +1,33 @@
+{
+  "id": "portfolio_info",
+  "type": "SharedSlice",
+  "name": "PortfolioInfo",
+  "description": "PortfolioInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "copy": {
+          "type": "Text",
+          "config": {
+            "label": "Copy",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

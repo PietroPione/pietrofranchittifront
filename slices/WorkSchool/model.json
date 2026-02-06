@@ -1,0 +1,167 @@
+{
+  "id": "work_school",
+  "type": "SharedSlice",
+  "name": "WorkSchool",
+  "description": "WorkSchool",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "work_title": {
+          "type": "Text",
+          "config": {
+            "label": "Work title",
+            "placeholder": ""
+          }
+        },
+        "work_copy": {
+          "type": "Text",
+          "config": {
+            "label": "Work copy",
+            "placeholder": ""
+          }
+        },
+        "works": {
+          "type": "Group",
+          "config": {
+            "label": "Works",
+            "repeat": true,
+            "fields": {
+              "work_position": {
+                "type": "Text",
+                "config": {
+                  "label": "Work position",
+                  "placeholder": ""
+                }
+              },
+              "dove": {
+                "type": "Text",
+                "config": {
+                  "label": "Dove",
+                  "placeholder": ""
+                }
+              },
+              "periodo": {
+                "type": "Text",
+                "config": {
+                  "label": "Periodo",
+                  "placeholder": ""
+                }
+              },
+              "attuale": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Attuale",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        },
+        "study_title": {
+          "type": "Text",
+          "config": {
+            "label": "Study title",
+            "placeholder": ""
+          }
+        },
+        "study_copy": {
+          "type": "Text",
+          "config": {
+            "label": "Study copy",
+            "placeholder": ""
+          }
+        },
+        "studies": {
+          "type": "Group",
+          "config": {
+            "label": "Studies",
+            "repeat": true,
+            "fields": {
+              "nome_corso": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome corso",
+                  "placeholder": ""
+                }
+              },
+              "dove": {
+                "type": "Text",
+                "config": {
+                  "label": "Dove",
+                  "placeholder": ""
+                }
+              },
+              "periodo": {
+                "type": "Text",
+                "config": {
+                  "label": "Periodo",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "titolo_certificazioni": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo Certificazioni",
+            "placeholder": ""
+          }
+        },
+        "copy_certificazioni": {
+          "type": "Text",
+          "config": {
+            "label": "Copy certificazioni",
+            "placeholder": ""
+          }
+        },
+        "certificazioni": {
+          "type": "Group",
+          "config": {
+            "label": "Certificazioni",
+            "repeat": true,
+            "fields": {
+              "nome_certificazione": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome certificazione",
+                  "placeholder": ""
+                }
+              },
+              "dove": {
+                "type": "Text",
+                "config": {
+                  "label": "Dove",
+                  "placeholder": ""
+                }
+              },
+              "quando": {
+                "type": "Text",
+                "config": {
+                  "label": "Quando",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

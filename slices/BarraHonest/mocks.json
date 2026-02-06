@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testohonest": {
+				"__TYPE__": "FieldContent",
+				"value": "principle",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

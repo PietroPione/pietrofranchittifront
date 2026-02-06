@@ -1,0 +1,46 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titolo": {
+				"__TYPE__": "FieldContent",
+				"value": "pair",
+				"type": "Text"
+			},
+			"paragrafi": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"titolo_paragrafo",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "feature",
+									"type": "Text"
+								}
+							],
+							[
+								"testo_paragrafo",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ea deserunt aute incididunt voluptate."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,50 @@
+{
+  "id": "cose_non_piacciono",
+  "type": "SharedSlice",
+  "name": "CoseNonPiacciono",
+  "description": "CoseNonPiacciono",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo_cose_non_piacciono": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo cose non piacciono",
+            "placeholder": ""
+          }
+        },
+        "cosa": {
+          "type": "Group",
+          "config": {
+            "label": "Cosa",
+            "repeat": true,
+            "fields": {
+              "nome_cosa": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome cosa",
+                  "placeholder": ""
+                }
+              },
+              "gif_cosa": {
+                "type": "Image",
+                "config": {
+                  "label": "Gif cosa",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

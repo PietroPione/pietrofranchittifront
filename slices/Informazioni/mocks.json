@@ -1,0 +1,47 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titolo": {
+				"__TYPE__": "FieldContent",
+				"value": "express",
+				"type": "Text"
+			},
+			"made_with": {
+				"__TYPE__": "FieldContent",
+				"value": "Elementor",
+				"type": "Select"
+			},
+			"visibile": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"link_progetto": {
+				"key": "ef3049e6-5c96-4045-96d8-7c4299bfb1a1",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "range"
+				}
+			},
+			"messaggio_non_visibile": {
+				"__TYPE__": "FieldContent",
+				"value": "mind",
+				"type": "Text"
+			},
+			"descrizione_progetto": {
+				"__TYPE__": "FieldContent",
+				"value": "grain",
+				"type": "Text"
+			},
+			"testo_tasto": {
+				"__TYPE__": "FieldContent",
+				"value": "buffalo",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

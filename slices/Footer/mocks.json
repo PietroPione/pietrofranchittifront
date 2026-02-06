@@ -1,0 +1,102 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"mail": {
+				"__TYPE__": "FieldContent",
+				"value": "spread",
+				"type": "Text"
+			},
+			"testo_mail": {
+				"__TYPE__": "FieldContent",
+				"value": "arrow",
+				"type": "Text"
+			},
+			"link_mail": {
+				"key": "5fa50a74-3b58-4c3d-af2c-3b216a25e480",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "dog"
+				}
+			},
+			"testo_dettagli_sviluppo": {
+				"__TYPE__": "FieldContent",
+				"value": "raw",
+				"type": "Text"
+			},
+			"copyright": {
+				"__TYPE__": "FieldContent",
+				"value": "planned",
+				"type": "Text"
+			},
+			"disclaimer": {
+				"__TYPE__": "FieldContent",
+				"value": "farmer",
+				"type": "Text"
+			},
+			"testo_cookie": {
+				"__TYPE__": "FieldContent",
+				"value": "gun",
+				"type": "Text"
+			},
+			"link_cookie": {
+				"key": "6ebeedba-4fae-48a6-8da0-b3494efcf0e1",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "habit"
+				}
+			},
+			"testo_iva": {
+				"__TYPE__": "FieldContent",
+				"value": "worker",
+				"type": "Text"
+			},
+			"partita_iva": {
+				"__TYPE__": "FieldContent",
+				"value": "been",
+				"type": "Text"
+			},
+			"testo_social": {
+				"__TYPE__": "FieldContent",
+				"value": "get",
+				"type": "Text"
+			},
+			"social": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_social",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "surface",
+									"type": "Text"
+								}
+							],
+							[
+								"link_social",
+								{
+									"key": "02ae4652-6e12-4d6d-8ea2-fe270762460c",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "sun"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,59 @@
+{
+  "id": "who_is_pio",
+  "type": "SharedSlice",
+  "name": "WhoIsPio",
+  "description": "WhoIsPio",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "testo": {
+          "type": "Text",
+          "config": {
+            "label": "Testo",
+            "placeholder": ""
+          }
+        },
+        "immagine": {
+          "type": "Image",
+          "config": {
+            "label": "Immagine",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "testo_tasto": {
+          "type": "Text",
+          "config": {
+            "label": "Testo tasto",
+            "placeholder": ""
+          }
+        },
+        "link_tasto": {
+          "type": "Link",
+          "config": {
+            "label": "Link tasto",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

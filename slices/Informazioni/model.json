@@ -1,0 +1,81 @@
+{
+  "id": "informazioni",
+  "type": "SharedSlice",
+  "name": "Informazioni",
+  "description": "Informazioni",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "made_with": {
+          "type": "Select",
+          "config": {
+            "label": "Made with",
+            "placeholder": "",
+            "options": [
+              "Wordpress",
+              "Elementor",
+              "React",
+              "Vue",
+              "Shopify"
+            ]
+          }
+        },
+        "testo_tasto": {
+          "type": "Text",
+          "config": {
+            "label": "Testo tasto",
+            "placeholder": ""
+          }
+        },
+        "link_progetto": {
+          "type": "Link",
+          "config": {
+            "label": "Link progetto",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "visibile": {
+          "type": "Boolean",
+          "config": {
+            "label": "Visibile",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "messaggio_non_visibile": {
+          "type": "Text",
+          "config": {
+            "label": "Messaggio non visibile",
+            "placeholder": ""
+          }
+        },
+        "descrizione_progetto": {
+          "type": "Text",
+          "config": {
+            "label": "Descrizione progetto",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

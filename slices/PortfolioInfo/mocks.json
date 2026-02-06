@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titolo": {
+				"__TYPE__": "FieldContent",
+				"value": "closely",
+				"type": "Text"
+			},
+			"copy": {
+				"__TYPE__": "FieldContent",
+				"value": "joy",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

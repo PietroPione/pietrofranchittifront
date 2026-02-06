@@ -1,0 +1,67 @@
+{
+  "id": "gallery",
+  "type": "SharedSlice",
+  "name": "Gallery",
+  "description": "Gallery",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "screen_desktop": {
+          "type": "Group",
+          "config": {
+            "label": "Screen desktop",
+            "repeat": true,
+            "fields": {
+              "screen": {
+                "type": "Image",
+                "config": {
+                  "label": "Screen",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "spiega": {
+                "type": "Text",
+                "config": {
+                  "label": "Spiega",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "screen_mobile": {
+          "type": "Group",
+          "config": {
+            "label": "Screen mobile",
+            "repeat": true,
+            "fields": {
+              "screen": {
+                "type": "Image",
+                "config": {
+                  "label": "Screen",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "spiega": {
+                "type": "Text",
+                "config": {
+                  "label": "Spiega",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

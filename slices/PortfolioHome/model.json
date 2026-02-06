@@ -1,0 +1,122 @@
+{
+  "id": "portfolio_home",
+  "type": "SharedSlice",
+  "name": "PortfolioHome",
+  "description": "PortfolioHome",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo_portfolio": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo portfolio",
+            "placeholder": ""
+          }
+        },
+        "copy_portfolio": {
+          "type": "Text",
+          "config": {
+            "label": "Copy portfolio",
+            "placeholder": ""
+          }
+        },
+        "progetti": {
+          "type": "Group",
+          "config": {
+            "label": "Progetti",
+            "repeat": true,
+            "fields": {
+              "nome": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome",
+                  "placeholder": ""
+                }
+              },
+              "screen_desktop": {
+                "type": "Image",
+                "config": {
+                  "label": "Screen desktop",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "screen_mobile": {
+                "type": "Image",
+                "config": {
+                  "label": "Screen mobile",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "made_with": {
+                "type": "Select",
+                "config": {
+                  "label": "Made with",
+                  "placeholder": "",
+                  "options": [
+                    "Wordpress",
+                    "Elementor",
+                    "React",
+                    "Vue",
+                    "Shopify"
+                  ]
+                }
+              },
+              "bg_color": {
+                "type": "Text",
+                "config": {
+                  "label": "Bg color",
+                  "placeholder": ""
+                }
+              },
+              "discover_more": {
+                "type": "Link",
+                "config": {
+                  "label": "Discover more",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        },
+        "copy_vedere_altro": {
+          "type": "Text",
+          "config": {
+            "label": "Copy vedere altro",
+            "placeholder": ""
+          }
+        },
+        "testo_tasto_altro": {
+          "type": "Text",
+          "config": {
+            "label": "Testo tasto altro",
+            "placeholder": ""
+          }
+        },
+        "link_altro": {
+          "type": "Link",
+          "config": {
+            "label": "Link altro",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

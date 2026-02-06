@@ -1,0 +1,91 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titolo_contatti": {
+				"__TYPE__": "FieldContent",
+				"value": "pig",
+				"type": "Text"
+			},
+			"copy_contatti": {
+				"__TYPE__": "FieldContent",
+				"value": "political",
+				"type": "Text"
+			},
+			"titolo_mail": {
+				"__TYPE__": "FieldContent",
+				"value": "swept",
+				"type": "Text"
+			},
+			"mail": {
+				"__TYPE__": "FieldContent",
+				"value": "ability",
+				"type": "Text"
+			},
+			"link_mail": {
+				"key": "abd0a5bd-fd7d-4094-9ebe-310bd5de966a",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "mostly"
+				}
+			},
+			"quote_contatti": {
+				"__TYPE__": "FieldContent",
+				"value": "somebody",
+				"type": "Text"
+			},
+			"immagine_contatti": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+					"width": 3277,
+					"height": 4092
+				},
+				"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+				"width": 3277,
+				"height": 4092,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "continued",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"autore_quote": {
+				"__TYPE__": "FieldContent",
+				"value": "positive",
+				"type": "Text"
+			},
+			"info_sito": {
+				"__TYPE__": "FieldContent",
+				"value": "wall",
+				"type": "Text"
+			},
+			"titolo_luogo": {
+				"__TYPE__": "FieldContent",
+				"value": "dig",
+				"type": "Text"
+			},
+			"testo_luogo": {
+				"__TYPE__": "FieldContent",
+				"value": "suit",
+				"type": "Text"
+			},
+			"testo_tasto_scopri": {
+				"__TYPE__": "FieldContent",
+				"value": "trade",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
