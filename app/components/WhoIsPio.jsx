@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import BasicButton from './BasicButton';
+import Icon from './Icon';
 import { motion } from 'framer-motion';
 
 export default function WhoISpio({ whoIsPioSlice }) {
@@ -26,13 +27,27 @@ export default function WhoISpio({ whoIsPioSlice }) {
                         )}
                     </div>
 
-                    {whoIsPioSlice.primary?.testo_tasto && whoIsPioSlice.primary?.link_tasto && (
-                        <div>
-                            <BasicButton
-                                testo={whoIsPioSlice.primary?.testo_tasto}
-                                link={whoIsPioSlice.primary?.link_tasto.url}
-                                scaleHover
-                            />
+                    {whoIsPioSlice.primary?.social?.length > 0 && (
+                        <div className="flex flex-wrap gap-6">
+                            {whoIsPioSlice.primary.social.map((social, index) => (
+                                <div key={`${social?.icon_name || 'social'}-${index}`} className="flex flex-col items-start gap-3">
+                                    {social?.icon_name && (
+                                        <Icon
+                                            name={social.icon_name}
+                                            size="calc(1em + 1rem)"
+                                            className="text-black dark:text-white text-14"
+                                        />
+                                    )}
+                                    {social?.testo_tasto && social?.link_tasto?.url && (
+                                        <BasicButton
+                                            testo={social.testo_tasto}
+                                            link={social.link_tasto.url}
+                                            externalLink
+                                            scaleHover
+                                        />
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     )}
                 </motion.div>

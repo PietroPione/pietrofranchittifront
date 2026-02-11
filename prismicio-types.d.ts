@@ -2104,6 +2104,57 @@ export type PortfolioInfoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *WhoIsPio → Default → Primary → Social*
+ */
+export interface WhoIsPioSliceDefaultPrimarySocialItem {
+  /**
+   * Icon name field in *WhoIsPio → Default → Primary → Social*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: who_is_pio.default.primary.social[].icon_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  icon_name: prismic.KeyTextField;
+
+  /**
+   * Nome social field in *WhoIsPio → Default → Primary → Social*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: who_is_pio.default.primary.social[].nome_social
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  nome_social: prismic.KeyTextField;
+
+  /**
+   * Testo tasto field in *WhoIsPio → Default → Primary → Social*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: who_is_pio.default.primary.social[].testo_tasto
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testo_tasto: prismic.KeyTextField;
+
+  /**
+   * Link tasto field in *WhoIsPio → Default → Primary → Social*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: who_is_pio.default.primary.social[].link_tasto
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link_tasto: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
  * Primary content in *WhoIsPio → Default → Primary*
  */
 export interface WhoIsPioSliceDefaultPrimary {
@@ -2128,40 +2179,14 @@ export interface WhoIsPioSliceDefaultPrimary {
   testo: prismic.KeyTextField;
 
   /**
-   * Immagine field in *WhoIsPio → Default → Primary*
+   * Social field in *WhoIsPio → Default → Primary*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: who_is_pio.default.primary.immagine
-   * - **Documentation**: https://prismic.io/docs/fields/image
+   * - **API ID Path**: who_is_pio.default.primary.social[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
-  immagine: prismic.ImageField<never>;
-
-  /**
-   * Testo tasto field in *WhoIsPio → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: who_is_pio.default.primary.testo_tasto
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  testo_tasto: prismic.KeyTextField;
-
-  /**
-   * Link tasto field in *WhoIsPio → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: who_is_pio.default.primary.link_tasto
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  link_tasto: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
+  social: prismic.GroupField<Simplify<WhoIsPioSliceDefaultPrimarySocialItem>>;
 }
 
 /**
@@ -2568,6 +2593,7 @@ declare module "@prismicio/client" {
       PortfolioInfoSliceVariation,
       PortfolioInfoSliceDefault,
       WhoIsPioSlice,
+      WhoIsPioSliceDefaultPrimarySocialItem,
       WhoIsPioSliceDefaultPrimary,
       WhoIsPioSliceVariation,
       WhoIsPioSliceDefault,

@@ -26,30 +26,45 @@
             "placeholder": ""
           }
         },
-        "immagine": {
-          "type": "Image",
+        "social": {
+          "type": "Group",
           "config": {
-            "label": "Immagine",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "testo_tasto": {
-          "type": "Text",
-          "config": {
-            "label": "Testo tasto",
-            "placeholder": ""
-          }
-        },
-        "link_tasto": {
-          "type": "Link",
-          "config": {
-            "label": "Link tasto",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true,
-            "repeat": false
+            "label": "Social",
+            "repeat": true,
+            "fields": {
+              "icon_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Icon name",
+                  "placeholder": ""
+                }
+              },
+              "nome_social": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome social",
+                  "placeholder": ""
+                }
+              },
+              "testo_tasto": {
+                "type": "Text",
+                "config": {
+                  "label": "Testo tasto",
+                  "placeholder": ""
+                }
+              },
+              "link_tasto": {
+                "type": "Link",
+                "config": {
+                  "label": "Link tasto",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
           }
         }
       },

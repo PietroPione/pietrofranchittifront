@@ -13,42 +13,51 @@
 				"value": "directly",
 				"type": "Text"
 			},
-			"immagine": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
-					"width": 4480,
-					"height": 4480
-				},
-				"url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
-				"width": 4480,
-				"height": 4480,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"alt": "folks",
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"testo_tasto": {
-				"__TYPE__": "FieldContent",
-				"value": "habit",
-				"type": "Text"
-			},
-			"link_tasto": {
-				"__TYPE__": "LinkContent",
-				"key": "f6c55db8-aa1f-419d-aaa6-ca5c2d4c25d1",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"text": "her"
-				}
+			"social": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_social",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "barn",
+									"type": "Text"
+								}
+							],
+							[
+								"testo_tasto",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "mine",
+									"type": "Text"
+								}
+							],
+							[
+								"link_tasto",
+								{
+									"key": "eef4535c-b6c8-4446-ad6d-2107232e0b24",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "equally"
+									}
+								}
+							],
+							[
+								"icon_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "forty",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

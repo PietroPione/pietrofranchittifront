@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect x="56" y="56" width="400" height="400" rx="90"
+        stroke="black" stroke-width="28"/>
+  
+  <!-- Dot -->
+  <circle cx="170" cy="200" r="24" fill="black"/>
+  
+  <!-- i -->
+  <rect x="150" y="240" width="40" height="140" fill="black"/>
+  
+  <!-- n -->
+  <path d="M240 240 
+           L240 380 
+           L280 380 
+           L280 300 
+           C280 260 340 260 340 300 
+           L340 380 
+           L380 380 
+           L380 290 
+           C380 220 240 220 240 290 Z"
+        fill="black"/>
+</svg>
