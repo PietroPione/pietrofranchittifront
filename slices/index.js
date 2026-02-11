@@ -6,6 +6,7 @@ export const components = {
   barra_honest: dynamic(() => import("./BarraHonest")),
   bio_falsa: dynamic(() => import("./BioFalsa")),
   bio_vera: dynamic(() => import("./BioVera")),
+  colori: dynamic(() => import("./Colori")),
   contatti_h: dynamic(() => import("./Contatti")),
   cookie_policy: dynamic(() => import("./CookiePolicy")),
   cose_non_piacciono: dynamic(() => import("./CoseNonPiacciono")),

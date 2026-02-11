@@ -1,6 +1,6 @@
 import { createClient } from "@/prismicio";
 import "./globals.css";
-import StarWarsHero from "./components/heroHome/StarWarsHero";
+import BrutalHero from "./components/heroHome/BrutalHero";
 import WorkSchool from "./components/bio/WorkSchool";
 import PortfolioHome from "./components/bio/PortfolioHome";
 import ContattiHome from "./components/ContattiHome";
@@ -37,7 +37,7 @@ export default async function Page() {
 
   return (
     <div className="relative space-y-20 md:space-y-40">
-      <StarWarsHero />
+      <BrutalHero />
       {whoIsPioSlice && <WhoIsPio whoIsPioSlice={whoIsPioSlice} id="who" />}
       {portfolioHome && <PortfolioHome portfolioHome={portfolioHome} portfolioPages={portfolioPagesResponse.results} id="portfolio" />}
       {workSchool && <WorkSchool workSchool={workSchool} id="cv" />}

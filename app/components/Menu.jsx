@@ -6,12 +6,16 @@ import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import DarkModeToggle from "./DarkModeToggle";
+import { useTheme } from "./ThemeProvider";
 
-const Menu = forwardRef(({ menu }, ref) => {
+const Menu = forwardRef(({ menu, colori = [] }, ref) => {
     const [isOpen, setIsOpen] = useState(false);
     const [showToggle, setShowToggle] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [menuHeight, setMenuHeight] = useState(0);
+    const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
+    const [selectedColor, setSelectedColor] = useState(null);
+    const { isDarkMode } = useTheme();
     const navRef = useRef(null);
     const nodeRef = useRef(null);
     const pathname = usePathname();
@@ -32,6 +36,19 @@ const Menu = forwardRef(({ menu }, ref) => {
         window.addEventListener('themeChanged', handleThemeChange);
         return () => window.removeEventListener('themeChanged', handleThemeChange);
     }, []);
+
+    const resetColorWorld = () => {
+        setSelectedColor(null);
+        setIsColorPickerOpen(false);
+        document.documentElement.classList.remove("color-world");
+        document.documentElement.style.removeProperty("--color-world");
+    };
+
+    useEffect(() => {
+        if (!selectedColor) return;
+        document.documentElement.style.setProperty("--color-world", selectedColor);
+        document.documentElement.classList.add("color-world");
+    }, [selectedColor]);
 
 
 
@@ -154,8 +171,19 @@ const Menu = forwardRef(({ menu }, ref) => {
                     >
                         <div className="container pr-16 md:pr-4 py-6 flex flex-col md:flex-row justify-end space-x-0 md:space-x-4">
                             <div className="flex justify-end order-2 md:order-1">
-
-                                <DarkModeToggle />
+                                <div className="flex items-center gap-2">
+                                    <DarkModeToggle onToggle={resetColorWorld} />
+                                    {colori.length > 0 && (
+                                        <button
+                                            onClick={() => setIsColorPickerOpen((prev) => !prev)}
+                                            className="px-1 py-0 border dark:border-white text-16 w-auto"
+                                            aria-expanded={isColorPickerOpen}
+                                            aria-controls="color-world-picker"
+                                        >
+                                            Colora il mondo
+                                        </button>
+                                    )}
+                                </div>
                             </div>
                             <ul className="flex flex-col md:flex-row items-end justify-center md:space-x-4 order-1 md:order-2">
                                 {menu.primary.link.map((item, index) => (
@@ -182,6 +210,41 @@ const Menu = forwardRef(({ menu }, ref) => {
                                 ))}
                             </ul>
                         </div>
+                        {isColorPickerOpen && colori.length > 0 && (
+                            <div
+                                id="color-world-picker"
+                                className="container pr-16 md:pr-4 pb-6 flex justify-end"
+                            >
+                                <div className="flex flex-wrap gap-2">
+                                    {selectedColor && (
+                                        <button
+                                            type="button"
+                                            onClick={resetColorWorld}
+                                            aria-label="Ripristina colori base"
+                                            title="Ripristina colori base"
+                                            className="w-5 h-5 border"
+                                            style={{ backgroundColor: isDarkMode ? "#ffffff" : "#000000" }}
+                                        />
+                                    )}
+                                    {colori.map((item, index) => {
+                                        const hex = (item?.colore || "").trim();
+                                        if (!hex) return null;
+                                        const isSelected = selectedColor === hex;
+                                        return (
+                                            <button
+                                                key={`${hex}-${index}`}
+                                                type="button"
+                                                onClick={() => setSelectedColor(hex)}
+                                                aria-label={`Colore ${hex}`}
+                                                title={hex}
+                                                className={`w-5 h-5 border ${isSelected ? "outline outline-2 outline-offset-2" : ""}`}
+                                                style={{ backgroundColor: hex, outlineColor: hex }}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
                     </motion.nav>
                 )}
             </AnimatePresence>

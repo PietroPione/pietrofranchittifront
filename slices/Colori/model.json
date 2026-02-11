@@ -1,0 +1,35 @@
+{
+  "id": "colori",
+  "type": "SharedSlice",
+  "name": "Colori",
+  "description": "Colori",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "colori": {
+          "type": "Group",
+          "config": {
+            "label": "Colori",
+            "repeat": true,
+            "fields": {
+              "colore": {
+                "type": "Text",
+                "config": {
+                  "label": "Colore",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

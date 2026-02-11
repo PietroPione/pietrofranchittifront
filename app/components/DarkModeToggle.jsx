@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const DarkModeToggle = () => {
+const DarkModeToggle = ({ onToggle }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
@@ -52,6 +52,9 @@ const DarkModeToggle = () => {
 
         // Forza il re-render dei componenti che lo ascoltano
         window.dispatchEvent(new Event('themeChanged'));
+        if (typeof onToggle === "function") {
+            onToggle();
+        }
     };
 
     return (

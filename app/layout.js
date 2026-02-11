@@ -59,6 +59,9 @@ export default async function RootLayout({ children }) {
   const footerData = footerResponse?.results[0]?.data?.slices?.find(
     (slice) => slice.slice_type === "footer"
   );
+  const coloriData = footerResponse?.results[0]?.data?.slices?.find(
+    (slice) => slice.slice_type === "colori"
+  );
 
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -93,7 +96,7 @@ export default async function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
 
-        <Menu menu={menuData} />
+        <Menu menu={menuData} colori={coloriData?.primary?.colori ?? []} />
         {children}
         <Footer footerData={footerData} />
         </ThemeProvider>

@@ -248,3 +248,18 @@ body {
     max-width: 90vw;
   }
 }
+
+/* Colora il mondo: sovrascrive i colori legati a light/dark */
+html.color-world [class*="dark:"],
+html.color-world [class*="text-black"],
+html.color-world [class*="text-white"],
+html.color-world [class*="border-white"],
+html.color-world [class*="border-black"],
+html.color-world .border,
+html.color-world .text-black,
+html.color-world .text-white,
+html.color-world .dark\:text-white,
+html.color-world .dark\:border-white {
+  color: var(--color-world) !important;
+  border-color: var(--color-world) !important;
+}

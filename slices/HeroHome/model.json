@@ -30,18 +30,10 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "sfondo_hero": {
+        "immagine_hero": {
           "type": "Image",
           "config": {
-            "label": "Sfondo Hero",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "gfi_stella": {
-          "type": "Image",
-          "config": {
-            "label": "Gfi stella",
+            "label": "Immagine Hero",
             "constraint": {},
             "thumbnails": []
           }
