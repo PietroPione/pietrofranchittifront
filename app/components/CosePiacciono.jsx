@@ -10,7 +10,7 @@ export default function CosePiacciono({ cosePiacciono }) {
         return null;
     }
 
-    const { titolo_cose_piacciono, cosa } = cosePiacciono.primary;
+    const { titolo_cose_piacciono, sottotitolo_cose_piacciono, cosa } = cosePiacciono.primary;
     const [hoveredImage, setHoveredImage] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
@@ -56,12 +56,19 @@ export default function CosePiacciono({ cosePiacciono }) {
     const offsetY = isDesktop ? -250 : -160;
 
     return (
-        <div className="relative">
+        <div className="relative text-black dark:text-white">
             <div
                 ref={containerRef}
-                className="container min-h-[35vh] md:min-h-[60vh] flex-col flex space-y-10 justify-center relative"
+                className="container min-h-[50vh] md:min-h-screen flex-col flex space-y-10 justify-center relative"
             >
-                {titolo_cose_piacciono && <h2 className="text-20 md:text-32 lg:text-40">{titolo_cose_piacciono}</h2>}
+                {titolo_cose_piacciono && (
+                    <div>
+                        <h2 className="text-46 md:text-60 leading-11 md:leading-14 font-bold py-4 md:py-8 z-10">
+                            {titolo_cose_piacciono}
+                        </h2>
+                        {sottotitolo_cose_piacciono && <p>{sottotitolo_cose_piacciono}</p>}
+                    </div>
+                )}
 
                 <div className="flex flex-col space-y-4">
                     {cosa.map((item, index) => (
@@ -70,7 +77,7 @@ export default function CosePiacciono({ cosePiacciono }) {
                             onMouseEnter={(e) => handleMouseEnter(item, e)}
                             onMouseLeave={handleMouseLeave}
                             onMouseMove={hoveredImage ? handleMouseMove : undefined}
-                            className="text-26 md:text-40 lg:text-46 font-black hover:text-white hover:bg-black dark:hover:bg-gray-400 relative"
+                            className="text-26 md:text-40 lg:text-46 font-black hover:underline relative"
                             style={{ marginLeft: isDesktop ? `${index * 5}rem` : '0' }}
                         >
                             - {item.nome_cosa}
@@ -82,7 +89,7 @@ export default function CosePiacciono({ cosePiacciono }) {
             <AnimatePresence>
                 {hoveredImage && (
                     <motion.div
-                        className="absolute z-10 pointer-events-none"
+                        className="absolute z-10 pointer-events-none border border-black dark:border-white"
                         initial={{ opacity: 0, scale: 0.8, y: -20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.8, y: -20 }}

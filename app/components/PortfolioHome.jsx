@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
-import BasicButton from '../BasicButton';
+import BasicButton from './BasicButton';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -74,8 +74,10 @@ export default function PortfolioHome({ portfolioHome, id }) {
                                 <li key={index} className="cursor-pointer w-full flex flex-col items-start">
                                     <h3
                                         onClick={() => handleProjectClick(progetto, index)}
-                                        className={`text-32 font-semibold w-full text-left md:text-center px-2 ${selectedIndex === index ? 'border-l-4 md:border-none pl-2' : ''} ${expandedProjectIndex === index ? 'bg-gray-100 dark:bg-dark-gray p-2' : ''}`}
-                                        style={{ backgroundColor: selectedIndex === index && !isMobileView ? `#${selectedProject?.bg_color}` : 'transparent' }}
+                                        className={`text-32 font-semibold w-full text-left md:text-center px-3 py-2 border-2 ${selectedIndex === index
+                                            ? 'border-black dark:border-white'
+                                            : 'border-transparent'
+                                            }`}
                                     >
                                         {progetto.nome}
                                     </h3>
@@ -88,7 +90,7 @@ export default function PortfolioHome({ portfolioHome, id }) {
                                                 transition={{ duration: 0.2, ease: "easeInOut" }}
                                                 className="mt-2 space-y-2 w-full"
                                             >
-                                                <div className="w-full border p-4 bg-white dark:bg-dark-secondary">
+                                                <div className="w-full border p-4">
                                                     <div className="relative w-full h-40 aspect-[9/16] mb-4 overflow-hidden">
                                                         <Image
                                                             src={progetto.screen_desktop?.url}
@@ -131,7 +133,7 @@ export default function PortfolioHome({ portfolioHome, id }) {
 
                 {/* Colonna destra (Anteprima portfolio) - Solo cambio immagine */}
                 {!isMobileView && (
-                    <div className={`w-full md:w-1/2 p-4 border h-1/2 md:h-full py-10 px-20 flex flex-col items-center justify-center lg:space-y-10`} style={{ backgroundColor: `#${selectedProject?.bg_color}` }}>
+                    <div className="w-full md:w-1/2 p-4 border h-1/2 md:h-full py-10 px-20 flex flex-col items-center justify-center lg:space-y-10">
                         <button onClick={toggleImageView} className="px-4 py-2 bg-white dark:bg-[var(--dark-gray)] hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-[var(--dark-gray)] border">
                             {buttonText}
                         </button>

@@ -4,7 +4,7 @@
 import FalsaBio from "./FalsaBio";
 import BarraHonest from "./BarraHonest";
 import VeraBio from "./VeraBio";
-import CosePiacciono from "./CosePiacciono";
+import CosePiacciono from "../CosePiacciono";
 import CoseNonPiacciono from "./CoseNonPiacciono";
 
 

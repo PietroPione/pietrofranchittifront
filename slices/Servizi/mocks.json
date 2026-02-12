@@ -1,0 +1,58 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"servizi": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_servizio",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sure",
+									"type": "Text"
+								}
+							],
+							[
+								"testo_tasto",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "law",
+									"type": "Text"
+								}
+							],
+							[
+								"ancora",
+								{
+									"__TYPE__": "RepeatableContent",
+									"type": "Link",
+									"value": [
+										{
+											"key": "8811e441-1aea-4783-bc81-f44e60d8ac50",
+											"__TYPE__": "LinkContent",
+											"value": {
+												"__TYPE__": "ExternalLink",
+												"url": "https://prismic.io",
+												"text": "either"
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"titolo": {
+				"__TYPE__": "FieldContent",
+				"value": "together",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -1,16 +1,15 @@
 'use client';
-import Image from 'next/image';
 import BasicButton from './BasicButton';
 import Icon from './Icon';
 import { motion } from 'framer-motion';
 
 export default function WhoISpio({ whoIsPioSlice }) {
     return (
-        <div className="container min-h-[60vh] py-10 md:py-20 scroll-mt-20" id="who">
-            <div className="flex flex-col md:flex-row gap-10 gap-x-20 items-stretch">
+        <div className="container min-h-[33vh] py-10 md:py-20 scroll-mt-20" id="who">
+            <div className="flex flex-col items-stretch">
                 {/* Colonna di sinistra (Testi) */}
                 <motion.div
-                    className="md:w-1/2 flex flex-col justify-center space-y-10"
+                    className="md:max-w-[50vw] flex flex-col justify-center space-y-10 md:space-y-20"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1, ease: 'easeOut' }}
@@ -28,15 +27,17 @@ export default function WhoISpio({ whoIsPioSlice }) {
                     </div>
 
                     {whoIsPioSlice.primary?.social?.length > 0 && (
-                        <div className="flex flex-wrap gap-6">
+                        <div className="flex flex-wrap gap-6 md:gap-10">
                             {whoIsPioSlice.primary.social.map((social, index) => (
                                 <div key={`${social?.icon_name || 'social'}-${index}`} className="flex flex-col items-start gap-3">
                                     {social?.icon_name && (
-                                        <Icon
-                                            name={social.icon_name}
-                                            size="calc(1em + 1rem)"
-                                            className="text-black dark:text-white text-14"
-                                        />
+                                        <div className="inline-flex items-center justify-center text-14 md:text-16 w-[5em] h-[5em]">
+                                            <Icon
+                                                name={social.icon_name}
+                                                size="100%"
+                                                className="text-black dark:text-white"
+                                            />
+                                        </div>
                                     )}
                                     {social?.testo_tasto && social?.link_tasto?.url && (
                                         <BasicButton
@@ -49,24 +50,6 @@ export default function WhoISpio({ whoIsPioSlice }) {
                                 </div>
                             ))}
                         </div>
-                    )}
-                </motion.div>
-
-                {/* Colonna di destra (Immagine) */}
-                <motion.div
-                    className="relative w-full md:w-1/2 h-[25vh] md:h-[50vh] pt-40 md:pt-0 overflow-hidden border"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1.2, ease: 'easeOut', delay: 0.1 }}
-                    viewport={{ once: true }}
-                >
-                    {whoIsPioSlice.primary?.immagine?.url && (
-                        <Image
-                            src={whoIsPioSlice.primary?.immagine.url}
-                            alt={whoIsPioSlice.primary?.immagine.alt || "Immagine Who is Pio"}
-                            fill
-                            style={{ objectFit: 'contain' }}
-                        />
                     )}
                 </motion.div>
             </div>

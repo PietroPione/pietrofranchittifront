@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "servizi": {
+              "type": "SharedSlice"
+            },
             "who_is_pio": {
               "type": "SharedSlice"
             },

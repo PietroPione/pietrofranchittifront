@@ -239,6 +239,7 @@ export type CookiePolicyDocument<Lang extends string = string> =
   >;
 
 type HomepageDocumentDataSlicesSlice =
+  | ServiziSlice
   | WhoIsPioSlice
   | ContattiHSlice
   | PortfolioHomeSlice
@@ -1242,6 +1243,16 @@ export interface CosePiaccionoSliceDefaultPrimary {
   titolo_cose_piacciono: prismic.KeyTextField;
 
   /**
+   * Sottotitolo cose piacciono field in *CosePiacciono → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cose_piacciono.default.primary.sottotitolo_cose_piacciono
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  sottotitolo_cose_piacciono: prismic.KeyTextField;
+
+  /**
    * Cosa field in *CosePiacciono → Default → Primary*
    *
    * - **Field Type**: Group
@@ -2104,6 +2115,98 @@ export type PortfolioInfoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Servizi → Default → Primary → Servizi*
+ */
+export interface ServiziSliceDefaultPrimaryServiziItem {
+  /**
+   * Nome servizio field in *Servizi → Default → Primary → Servizi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servizi.default.primary.servizi[].nome_servizio
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  nome_servizio: prismic.KeyTextField;
+
+  /**
+   * Testo tasto field in *Servizi → Default → Primary → Servizi*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servizi.default.primary.servizi[].testo_tasto
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testo_tasto: prismic.KeyTextField;
+
+  /**
+   * Ancora field in *Servizi → Default → Primary → Servizi*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servizi.default.primary.servizi[].ancora
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  ancora: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+}
+
+/**
+ * Primary content in *Servizi → Default → Primary*
+ */
+export interface ServiziSliceDefaultPrimary {
+  /**
+   * Titolo field in *Servizi → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servizi.default.primary.titolo
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  titolo: prismic.KeyTextField;
+
+  /**
+   * Servizi field in *Servizi → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: servizi.default.primary.servizi[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  servizi: prismic.GroupField<Simplify<ServiziSliceDefaultPrimaryServiziItem>>;
+}
+
+/**
+ * Default variation for Servizi Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ServiziSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServiziSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Servizi*
+ */
+type ServiziSliceVariation = ServiziSliceDefault;
+
+/**
+ * Servizi Shared Slice
+ *
+ * - **API ID**: `servizi`
+ * - **Description**: Servizi
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ServiziSlice = prismic.SharedSlice<
+  "servizi",
+  ServiziSliceVariation
+>;
+
+/**
  * Item in *WhoIsPio → Default → Primary → Social*
  */
 export interface WhoIsPioSliceDefaultPrimarySocialItem {
@@ -2592,6 +2695,11 @@ declare module "@prismicio/client" {
       PortfolioInfoSliceDefaultPrimary,
       PortfolioInfoSliceVariation,
       PortfolioInfoSliceDefault,
+      ServiziSlice,
+      ServiziSliceDefaultPrimaryServiziItem,
+      ServiziSliceDefaultPrimary,
+      ServiziSliceVariation,
+      ServiziSliceDefault,
       WhoIsPioSlice,
       WhoIsPioSliceDefaultPrimarySocialItem,
       WhoIsPioSliceDefaultPrimary,

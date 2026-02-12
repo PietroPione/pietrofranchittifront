@@ -1,0 +1,60 @@
+{
+  "id": "servizi",
+  "type": "SharedSlice",
+  "name": "Servizi",
+  "description": "Servizi",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titolo": {
+          "type": "Text",
+          "config": {
+            "label": "Titolo",
+            "placeholder": ""
+          }
+        },
+        "servizi": {
+          "type": "Group",
+          "config": {
+            "label": "Servizi",
+            "repeat": true,
+            "fields": {
+              "nome_servizio": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome servizio",
+                  "placeholder": ""
+                }
+              },
+              "testo_tasto": {
+                "type": "Text",
+                "config": {
+                  "label": "Testo tasto",
+                  "placeholder": ""
+                }
+              },
+              "ancora": {
+                "type": "Link",
+                "config": {
+                  "label": "Ancora",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

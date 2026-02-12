@@ -19,6 +19,13 @@
             "placeholder": ""
           }
         },
+        "sottotitolo_cose_piacciono": {
+          "type": "Text",
+          "config": {
+            "label": "Sottotitolo cose piacciono",
+            "placeholder": ""
+          }
+        },
         "cosa": {
           "type": "Group",
           "config": {

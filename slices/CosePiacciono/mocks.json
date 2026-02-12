@@ -51,6 +51,11 @@
 						]
 					}
 				]
+			},
+			"sottotitolo_cose_piacciono": {
+				"__TYPE__": "FieldContent",
+				"value": "friend",
+				"type": "Text"
 			}
 		},
 		"items": []
