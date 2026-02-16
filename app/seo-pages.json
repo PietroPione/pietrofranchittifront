@@ -1,0 +1,46 @@
+{
+  "pages": [
+    {
+      "slug": "corporate-communication",
+      "hero": {
+        "title": "Corporate Communication",
+        "subtitle": "Strategia editoriale, posizionamento del brand e contenuti per comunicare in modo chiaro e coerente."
+      },
+      "sections": [
+        {
+          "title": "Perche investire nella comunicazione corporate",
+          "body": "Una comunicazione corporate ben progettata aiuta aziende e professionisti a raccontare identita, valori e differenze competitive."
+        },
+        {
+          "title": "Come lavoro",
+          "body": "Definisco tone of voice, architettura dei messaggi e linee guida operative per sito, materiali marketing e canali digitali.",
+          "bullets": [
+            "Analisi del posizionamento e del pubblico",
+            "Definizione dei messaggi chiave",
+            "Piano contenuti multi-canale",
+            "Ottimizzazione testi per chiarezza e conversione"
+          ]
+        },
+        {
+          "title": "Obiettivo",
+          "body": "Costruire una comunicazione coerente, riconoscibile e orientata a risultati concreti."
+        }
+      ],
+      "cta": {
+        "text": "Parliamone",
+        "href": "/#contatti"
+      },
+      "meta": {
+        "title": "Corporate Communication | Pietro Franchitti",
+        "description": "Servizi di corporate communication: strategia, contenuti e coordinamento del tono di voce per aziende e professionisti.",
+        "keywords": [
+          "corporate communication",
+          "comunicazione aziendale",
+          "strategia contenuti",
+          "copywriting",
+          "brand communication"
+        ]
+      }
+    }
+  ]
+}
