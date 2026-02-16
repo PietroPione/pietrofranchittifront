@@ -54,7 +54,7 @@ export default async function Page() {
       {serviziSlice && <Servizi serviziSlice={serviziSlice} id="servizi" />}
       {portfolioHome && <PortfolioHome portfolioHome={portfolioHome} portfolioPages={portfolioPagesResponse.results} id="portfolio" />}
       {workSchool && <WorkSchool workSchool={workSchool} id="cv" />}
-      {hasCosePiacciono && <CosePiacciono cosePiacciono={cosePiacciono} />}
+      {/* {hasCosePiacciono && <CosePiacciono cosePiacciono={cosePiacciono} />} */}
       {contattiHome && <ContattiHome contattiHome={contattiHome} id="contatti" />}
 
     </div>
