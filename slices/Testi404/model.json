@@ -1,0 +1,53 @@
+{
+  "id": "testi404",
+  "type": "SharedSlice",
+  "name": "Testi404",
+  "description": "Testi404",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "copy_grosso": {
+          "type": "Text",
+          "config": {
+            "label": "Copy grosso",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Group",
+          "config": {
+            "label": "Link",
+            "repeat": true,
+            "fields": {
+              "testo": {
+                "type": "Text",
+                "config": {
+                  "label": "Testo",
+                  "placeholder": ""
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

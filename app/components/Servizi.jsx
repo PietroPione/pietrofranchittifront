@@ -32,13 +32,13 @@ export default function Servizi({ serviziSlice, id }) {
                   {servizio.nome_servizio}
                 </div>
               )}
-              {servizio?.testo_tasto && link && (
+              {/* {servizio?.testo_tasto && link && (
                 <BasicButton
                   testo={servizio.testo_tasto}
                   link={link}
                   scaleHover
                 />
-              )}
+              )} */}
             </div>
           );
         })}

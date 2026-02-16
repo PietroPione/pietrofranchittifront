@@ -69,6 +69,67 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
+type _404DocumentDataSlicesSlice = Testi404Slice;
+
+/**
+ * Content for 404 documents
+ */
+interface _404DocumentData {
+  /**
+   * Slice Zone field in *404*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: 404.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<_404DocumentDataSlicesSlice> /**
+   * Meta Title field in *404*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: 404.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *404*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: 404.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *404*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: 404.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * 404 document from Prismic
+ *
+ * - **API ID**: `404`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type _404Document<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<_404DocumentData>, "404", Lang>;
+
 type BiofalsaDocumentDataSlicesSlice =
   | CoseNonPiaccionoSlice
   | CosePiaccionoSlice
@@ -515,6 +576,7 @@ export type PortfoliopageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes =
+  | _404Document
   | BiofalsaDocument
   | BiometadatiDocument
   | CookiePolicyDocument
@@ -2207,6 +2269,86 @@ export type ServiziSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Testi404 → Default → Primary → Link*
+ */
+export interface Testi404SliceDefaultPrimaryLinkItem {
+  /**
+   * Testo field in *Testi404 → Default → Primary → Link*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testi404.default.primary.link[].testo
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testo: prismic.KeyTextField;
+
+  /**
+   * Link field in *Testi404 → Default → Primary → Link*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testi404.default.primary.link[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Primary content in *Testi404 → Default → Primary*
+ */
+export interface Testi404SliceDefaultPrimary {
+  /**
+   * Copy grosso field in *Testi404 → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testi404.default.primary.copy_grosso
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  copy_grosso: prismic.KeyTextField;
+
+  /**
+   * Link field in *Testi404 → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testi404.default.primary.link[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  link: prismic.GroupField<Simplify<Testi404SliceDefaultPrimaryLinkItem>>;
+}
+
+/**
+ * Default variation for Testi404 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type Testi404SliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<Testi404SliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Testi404*
+ */
+type Testi404SliceVariation = Testi404SliceDefault;
+
+/**
+ * Testi404 Shared Slice
+ *
+ * - **API ID**: `testi404`
+ * - **Description**: Testi404
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type Testi404Slice = prismic.SharedSlice<
+  "testi404",
+  Testi404SliceVariation
+>;
+
+/**
  * Item in *WhoIsPio → Default → Primary → Social*
  */
 export interface WhoIsPioSliceDefaultPrimarySocialItem {
@@ -2598,6 +2740,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      _404Document,
+      _404DocumentData,
+      _404DocumentDataSlicesSlice,
       BiofalsaDocument,
       BiofalsaDocumentData,
       BiofalsaDocumentDataSlicesSlice,
@@ -2700,6 +2845,11 @@ declare module "@prismicio/client" {
       ServiziSliceDefaultPrimary,
       ServiziSliceVariation,
       ServiziSliceDefault,
+      Testi404Slice,
+      Testi404SliceDefaultPrimaryLinkItem,
+      Testi404SliceDefaultPrimary,
+      Testi404SliceVariation,
+      Testi404SliceDefault,
       WhoIsPioSlice,
       WhoIsPioSliceDefaultPrimarySocialItem,
       WhoIsPioSliceDefaultPrimary,
