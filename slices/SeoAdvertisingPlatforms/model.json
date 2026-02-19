@@ -1,0 +1,72 @@
+{
+  "id": "seo_advertising_platforms",
+  "type": "SharedSlice",
+  "name": "SeoAdvertisingPlatforms",
+  "description": "Advertising platforms intro and cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "intro_title": {
+          "type": "Text",
+          "config": {
+            "label": "Intro title",
+            "placeholder": ""
+          }
+        },
+        "intro_body": {
+          "type": "Text",
+          "config": {
+            "label": "Intro body",
+            "placeholder": ""
+          }
+        },
+        "platforms": {
+          "type": "Group",
+          "config": {
+            "label": "Platforms",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "ideal_for": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Ideal for",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "advantages": {
+                "type": "Text",
+                "config": {
+                  "label": "Advantages",
+                  "placeholder": ""
+                }
+              },
+              "minimum_budget": {
+                "type": "Text",
+                "config": {
+                  "label": "Minimum budget",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

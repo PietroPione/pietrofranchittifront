@@ -1,0 +1,93 @@
+{
+  "id": "seo_service_blocks",
+  "type": "SharedSlice",
+  "name": "SeoServiceBlocks",
+  "description": "Service blocks for SEO pages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section title",
+            "placeholder": ""
+          }
+        },
+        "blocks": {
+          "type": "Group",
+          "config": {
+            "label": "Blocks",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "Text",
+                "config": {
+                  "label": "Body",
+                  "placeholder": ""
+                }
+              },
+              "list_title": {
+                "type": "Text",
+                "config": {
+                  "label": "List title",
+                  "placeholder": ""
+                }
+              },
+              "items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "tools_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Tools title",
+                  "placeholder": ""
+                }
+              },
+              "deliverable": {
+                "type": "Text",
+                "config": {
+                  "label": "Deliverable",
+                  "placeholder": ""
+                }
+              },
+              "tools": {
+                "type": "Text",
+                "config": {
+                  "label": "Tools (comma separated)",
+                  "placeholder": "Mailchimp, Mailup"
+                }
+              },
+              "note": {
+                "type": "Text",
+                "config": {
+                  "label": "Note",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

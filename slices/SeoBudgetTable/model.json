@@ -1,0 +1,79 @@
+{
+  "id": "seo_budget_table",
+  "type": "SharedSlice",
+  "name": "SeoBudgetTable",
+  "description": "Budget table with fee list",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "platforms": {
+          "type": "Group",
+          "config": {
+            "label": "Platforms",
+            "repeat": true,
+            "fields": {
+              "platform": {
+                "type": "Text",
+                "config": {
+                  "label": "Platform",
+                  "placeholder": ""
+                }
+              },
+              "test": {
+                "type": "Text",
+                "config": {
+                  "label": "Test",
+                  "placeholder": ""
+                }
+              },
+              "pmi": {
+                "type": "Text",
+                "config": {
+                  "label": "PMI",
+                  "placeholder": ""
+                }
+              },
+              "structured": {
+                "type": "Text",
+                "config": {
+                  "label": "Structured",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "multi_platform": {
+          "type": "Text",
+          "config": {
+            "label": "Multi platform",
+            "placeholder": ""
+          }
+        },
+        "fee": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Fee",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,list-item"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "seo_kpi_groups",
+  "type": "SharedSlice",
+  "name": "SeoKpiGroups",
+  "description": "KPI grouped cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "groups": {
+          "type": "Group",
+          "config": {
+            "label": "Groups",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

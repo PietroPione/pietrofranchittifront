@@ -2,43 +2,1085 @@
   "pages": [
     {
       "slug": "corporate-communication",
-      "hero": {
-        "title": "Corporate Communication",
-        "subtitle": "Strategia editoriale, posizionamento del brand e contenuti per comunicare in modo chiaro e coerente."
-      },
-      "sections": [
+      "breadcrumbs": [
         {
-          "title": "Perche investire nella comunicazione corporate",
-          "body": "Una comunicazione corporate ben progettata aiuta aziende e professionisti a raccontare identita, valori e differenze competitive."
+          "label": "Home",
+          "href": "/"
         },
         {
-          "title": "Come lavoro",
-          "body": "Definisco tone of voice, architettura dei messaggi e linee guida operative per sito, materiali marketing e canali digitali.",
-          "bullets": [
-            "Analisi del posizionamento e del pubblico",
-            "Definizione dei messaggi chiave",
-            "Piano contenuti multi-canale",
-            "Ottimizzazione testi per chiarezza e conversione"
+          "label": "Servizi",
+          "href": "/#servizi"
+        },
+        {
+          "label": "Corporate Communications"
+        }
+      ],
+      "hero": {
+        "title": "Corporate Communications & Marketing Aziendale",
+        "subtitle": "Consulente comunicazione e marketing aziendale a Torino con esperienza dal 2020. Aiuto PMI, aziende strutturate e startup a definire strategie efficaci, costruire identità di marca coerenti e raggiungere obiettivi di business con un approccio integrato."
+      },
+      "service_blocks": [
+        {
+          "title": "Content Strategy & Content Marketing",
+          "body": "Strategia di contenuti per attrarre, educare e convertire il pubblico target.",
+          "list_title": "Cosa include",
+          "items": [
+            "Content audit",
+            "Personas e buyer journey",
+            "Content pillars",
+            "Editorial calendar",
+            "Blog aziendale SEO-friendly",
+            "Case study",
+            "Whitepaper e ebook",
+            "Newsletter e email marketing"
+          ],
+          "note": "Approccio che unisce storytelling, SEO e conversion."
+        },
+        {
+          "title": "Brand Positioning & Identity",
+          "body": "Definizione o revisione del posizionamento di marca per differenziarsi dai competitor.",
+          "list_title": "Deliverable",
+          "items": [
+            "Brand audit",
+            "Competitor analysis",
+            "Unique Value Proposition (UVP)",
+            "Brand positioning statement",
+            "Brand voice e tone of voice",
+            "Messaging framework",
+            "Brand story"
           ]
         },
         {
-          "title": "Obiettivo",
-          "body": "Costruire una comunicazione coerente, riconoscibile e orientata a risultati concreti."
+          "title": "Piano di Comunicazione Integrato",
+          "body": "Strategia omnicanale che coordina touchpoint digitali e tradizionali.",
+          "list_title": "Fasi del piano",
+          "items": [
+            "Analisi situazionale",
+            "Definizione obiettivi comunicazione",
+            "Target audience e personas",
+            "Key messages",
+            "Strategia canali",
+            "Execution con timeline",
+            "Budget allocation",
+            "KPI e measurement"
+          ],
+          "note": "Documento strategico-operativo su orizzonte 6-12 mesi."
+        },
+        {
+          "title": "Social Media Strategy (Corporate)",
+          "body": "Strategia social orientata a obiettivi di business, community e lead generation.",
+          "items": [
+            "Social media audit",
+            "Platform selection",
+            "Content strategy",
+            "Editorial calendar",
+            "LinkedIn B2B",
+            "Social listening",
+            "Community management",
+            "Integrazione social advertising",
+            "Employee advocacy"
+          ]
+        },
+        {
+          "title": "Internal Communications",
+          "body": "Comunicazione interna per aumentare engagement, allineamento e cultura aziendale.",
+          "items": [
+            "Audit comunicazione interna",
+            "Strategia intranet",
+            "Newsletter interna",
+            "Onboarding communications",
+            "Change communications",
+            "Town hall e meeting",
+            "Canali interni: Slack, Teams, app proprietarie"
+          ]
+        },
+        {
+          "title": "Copywriting & Content Creation",
+          "body": "Scrittura professionale per tutti i touchpoint aziendali.",
+          "items": [
+            "Website copy",
+            "Blog articles",
+            "Email marketing",
+            "Social copy",
+            "Sales collateral",
+            "Press release",
+            "Video script",
+            "Ad copy"
+          ]
+        },
+        {
+          "title": "Marketing Automation & Lead Nurturing",
+          "body": "Workflow automatizzati per nutrire e qualificare lead fino alla vendita.",
+          "items": [
+            "Email automation",
+            "Lead scoring",
+            "Segmentazione dinamica",
+            "Workflow multicanale",
+            "Integrazione CRM",
+            "Personalizzazione contenuti"
+          ],
+          "tools_title": "Tools",
+          "tools": [
+            "Mailchimp",
+            "Mailup"
+          ]
         }
       ],
-      "cta": {
-        "text": "Parliamone",
-        "href": "/#contatti"
+      "method": {
+        "title": "Il Mio Approccio Corporate",
+        "steps": [
+          "Discovery profonda: business, mercato, competitor, pubblico, sfide",
+          "Definizione obiettivi con KPI misurabili",
+          "Strategia: positioning, messaggi, canali, content pillars",
+          "Execution: produzione contenuti e implementazione",
+          "Measurement e optimization continua"
+        ]
       },
+      "competitive_advantage": {
+        "title": "Vantaggio Competitivo: Marketing + Tech",
+        "items": [
+          "Implementazione diretta senza colli di bottiglia operativi",
+          "Landing page conversion-focused",
+          "Marketing automation con setup tecnico",
+          "SEO integrato a content strategy",
+          "Setup analytics, dashboard e tracking conversioni",
+          "Siti web che comunicano e convertono"
+        ]
+      },
+      "experience": {
+        "title": "Esperienza Corporate Communications",
+        "body": "Dal 2020 gestisco comunicazione corporate e marketing per aziende e PMI, con focus su content strategy, SEO, social ed email marketing.",
+        "items": [
+          "Corporate Marketing & Communications + SEO | Idrocentro | 2020 - presente",
+          "Meta & LinkedIn Adv + SEO | Freelance | 2019 - presente",
+          "WordPress Developer | Imperfect Comunicazione | 2022 - presente"
+        ]
+      },
+      "education": {
+        "title": "Formazione e Certificazioni",
+        "items": [
+          "Master in Marketing, Sales & Digital Communication - Università di Torino (2017)",
+          "Laurea Specialistica in Scienze Storiche - Università di Torino (2016)",
+          "Content & Creative Design, Marketing Fundamentals & Strategy - LinkedIn (2022)",
+          "SEO, WordPress, HTML, CSS - LinkedIn Assessment (2022)"
+        ],
+        "note": "Il background tra ricerca, analisi e marketing rafforza la qualita strategica dei progetti."
+      },
+      "when_to_hire": {
+        "title": "Quando Serve un Consulente Corporate Communications",
+        "items": [
+          "Assenza di reparto marketing/comunicazione interno",
+          "Team operativo ma senza visione strategica",
+          "Lancio nuovo prodotto o ingresso in nuovo mercato",
+          "Rebrand o riposizionamento",
+          "Comunicazione attuale senza risultati misurabili",
+          "Necessità di strutturare la comunicazione aziendale",
+          "Accelerare senza assumere full-time"
+        ]
+      },
+      "faq": {
+        "title": "Domande Frequenti",
+        "items": [
+          {
+            "question": "Quanto costa una consulenza corporate communications?",
+            "answer": "Dipende dallo scope, dalla complessità e dalle ore richieste."
+          },
+          {
+            "question": "Lavori in-house o da remoto?",
+            "answer": "Principalmente da remoto con meeting periodici. Per progetti strutturati, disponibile anche in presenza a Torino."
+          },
+          {
+            "question": "Posso affidarti solo la strategia o anche l'esecuzione?",
+            "answer": "Entrambe le opzioni: consulenza strategica oppure strategia piu execution operativa."
+          },
+          {
+            "question": "Quanto tempo ci vuole per vedere risultati?",
+            "answer": "I risultati dipendono dagli obiettivi: alcuni segnali in 3-6 mesi, altri come awareness e thought leadership richiedono 6-12+ mesi."
+          },
+          {
+            "question": "Lavori solo con grandi aziende o anche con PMI?",
+            "answer": "Lavoro principalmente (e per ora unicamente) con PMI."
+          }
+        ]
+      },
+      "final_cta": {
+        "title": "Struttura la Tua Comunicazione Aziendale",
+        "body": "Vuoi una strategia di comunicazione che porti risultati concreti? Contattami per una consulenza conoscitiva e una proposta su misura.",
+        "button": {
+          "text": "Contattami",
+          "href": "/#contatti"
+        }
+      },
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "pietro@pietrofranchitti.it",
+          "href": "mailto:pietro@pietrofranchitti.it"
+        },
+        {
+          "label": "Telefono",
+          "value": "+39 339 192 0613",
+          "href": "tel:+393391920613"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Pietro Franchitti",
+          "href": "https://www.linkedin.com/in/pietrofranchitti/",
+          "external": true
+        }
+      ],
+      "other_services": [
+        {
+          "text": "SEO & Content",
+          "href": "/consulenza-seo-torino"
+        },
+        {
+          "text": "Sviluppo Web",
+          "href": "/sviluppo-siti-web-torino"
+        },
+        {
+          "text": "Advertising",
+          "href": "/servizi-advertising-torino"
+        }
+      ],
       "meta": {
-        "title": "Corporate Communication | Pietro Franchitti",
-        "description": "Servizi di corporate communication: strategia, contenuti e coordinamento del tono di voce per aziende e professionisti.",
+        "title": "Corporate Communications Torino | Strategia, Content e Marketing Aziendale",
+        "description": "Consulenza corporate communications a Torino: content strategy, brand positioning, piano comunicazione integrato, social strategy e marketing automation.",
         "keywords": [
-          "corporate communication",
-          "comunicazione aziendale",
-          "strategia contenuti",
-          "copywriting",
-          "brand communication"
+          "corporate communications torino",
+          "marketing aziendale torino",
+          "content strategy torino",
+          "brand positioning",
+          "consulente comunicazione aziendale"
+        ]
+      }
+    },
+    {
+      "slug": "sviluppo-siti-web-torino",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Servizi",
+          "href": "/#servizi"
+        },
+        {
+          "label": "Sviluppo Web"
+        }
+      ],
+      "hero": {
+        "title": "Sviluppo Web & Frontend Development",
+        "subtitle": "Frontend developer specializzato in React, WordPress e Shopify con sede a Torino. Creo siti web e applicazioni moderne, performanti e responsive, con attenzione all'estetica e all'user experience. Dal 2019 supporto aziende e professionisti nella presenza digitale."
+      },
+      "technologies": [
+        {
+          "title": "React & TypeScript",
+          "body": "Sviluppo applicazioni web moderne con React e TypeScript per progetti che richiedono interattività, performance e scalabilità. Architetture component-based, state management avanzato e integrazione con API REST e GraphQL.",
+          "services_title": "Cosa realizzo con React",
+          "services": [
+            "Single Page Applications (SPA): applicazioni web dinamiche e fluide",
+            "Landing page interattive: conversione e engagement ottimizzati",
+            "Interfacce e-commerce custom: esperienze di acquisto uniche"
+          ],
+          "skills_title": "Competenze tecniche",
+          "skills": [
+            "React 18+ con Hooks e Context API",
+            "TypeScript per codice type-safe",
+            "Angular (certificazione Codecademy 2024)",
+            "Responsive design con Tailwind CSS / CSS-in-JS"
+          ],
+          "note": "Esempio concreto: il mio sito personale pietrofranchitti.it e sviluppato interamente in React, con architettura moderna e design curato nei minimi dettagli."
+        },
+        {
+          "title": "WordPress Development",
+          "body": "WordPress developer dal 2022 con esperienza in temi custom, plugin personalizzati e ottimizzazione performance. WordPress rimane una piattaforma ideale per blog, siti corporate e progetti con CMS.",
+          "services_title": "Servizi WordPress",
+          "services": [
+            "Temi custom: personalizzazione temi esistenti",
+            "WooCommerce: e-commerce completi e performanti",
+            "Multilingua: siti internazionali con WPML o Polylang",
+            "Ottimizzazione velocità: caching, lazy loading, CDN",
+            "Migrazione siti: da altre piattaforme a WordPress",
+            "Manutenzione: aggiornamenti, backup, sicurezza"
+          ],
+          "skills_title": "Strumenti e competenze",
+          "skills": [
+            "Advanced Custom Fields (ACF) e Gutenberg blocks",
+            "Page builder: Elementor, WPBakery, Divi",
+            "Certificazione LinkedIn WordPress (2022)",
+            "SEO-friendly development",
+            "Sicurezza e best practices"
+          ]
+        },
+        {
+          "title": "Shopify Development",
+          "body": "Creazione di negozi online professionali con Shopify, ideale per PMI e brand che vogliono vendere online senza complessità tecniche, con focus su design, user experience e conversione.",
+          "services_title": "Cosa offro con Shopify",
+          "services": [
+            "Setup completo store: da zero alla pubblicazione",
+            "Temi personalizzati: design unico e brand identity",
+            "Ottimizzazione conversioni: checkout, upselling, cross-selling",
+            "Integrazioni: pagamenti, spedizioni, email marketing, CRM",
+            "Mobile-first design: esperienza ottimizzata su smartphone",
+            "SEO e performance: velocità e posizionamento sui motori"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Il Mio Processo di Lavoro",
+        "steps": [
+          "Discovery & Brief: ascolto esigenze, obiettivi, mercato e competitor",
+          "Proposta e preventivo: piano con tecnologie, tempistiche e costi",
+          "Design e prototipazione: wireframe e mockup per validare l'interfaccia",
+          "Sviluppo: coding con aggiornamenti periodici e feedback",
+          "Testing e QA: test cross-browser, performance, mobile e accessibilità",
+          "Deploy e lancio: pubblicazione con configurazione ottimale",
+          "Formazione e supporto: guida all'uso e supporto post-lancio"
+        ]
+      },
+      "complementary_skills": {
+        "title": "Competenze Complementari",
+        "body": "Il mio background in marketing e comunicazione (Master Università di Torino, 2017) mi permette di andare oltre il codice.",
+        "items": [
+          "UX/UI Design: interfacce user-centered",
+          "SEO tecnica: Core Web Vitals e schema markup",
+          "Conversion optimization: design orientato alla conversione",
+          "Content strategy: architettura informativa e struttura contenuti",
+          "Analytics: Google Analytics, Tag Manager, heatmaps"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio e Progetti",
+        "body": "Vuoi vedere esempi concreti del mio lavoro? Visita il portfolio o esplora i progetti su GitHub. Il mio sito pietrofranchitti.it, sviluppato in React, rappresenta il mio approccio: design curato, codice pulito e performance solide.",
+        "links": [
+          {
+            "text": "Vai al portfolio",
+            "href": "/portfolio"
+          },
+          {
+            "text": "Profilo GitHub",
+            "href": "https://github.com/PietroPione",
+            "external": true
+          }
+        ]
+      },
+      "certifications": {
+        "title": "Formazione e Certificazioni",
+        "items": [
+          "Data and Programming Foundations for AI Skill Path - Codecademy (2024)",
+          "Learn Angular Course - Codecademy (2024)",
+          "Learn TypeScript Course - Codecademy (2024)",
+          "Responsive Web Design - FreeCodeCamp (2022)",
+          "WordPress, HTML, CSS - LinkedIn Assessment (2022)",
+          "Master in Marketing, Sales & Digital Communication - Università di Torino (2017)"
+        ]
+      },
+      "experience": {
+        "title": "Esperienza Professionale",
+        "items": [
+          "Creazione siti Web con React, WordPress e Shopify | Freelance | 2019 - presente",
+          "Junior Frontend Developer | Sette.studio | 2023 - presente",
+          "Junior Fullstack Developer | Promemoria srl | 2024",
+          "WordPress Developer | Imperfect Comunicazione | 2022 - presente"
+        ]
+      },
+      "faq": {
+        "title": "Domande Frequenti (FAQ)",
+        "items": [
+          {
+            "question": "Quale tecnologia è meglio per il mio progetto: React, WordPress o Shopify?",
+            "answer": "Dipende dalle esigenze. React è ideale per app complesse e interattive. WordPress è perfetto per blog, siti corporate e piccoli e-commerce. Shopify è una scelta solida per negozi online."
+          },
+          {
+            "question": "Quanto tempo ci vuole per sviluppare un sito web?",
+            "answer": "Dipende dalla complessità: una landing React puo richiedere 1-2 settimane, un sito WordPress 2-4 settimane, un e-commerce Shopify 3-6 settimane."
+          },
+          {
+            "question": "Fornisci anche servizi di hosting e dominio?",
+            "answer": "Si, posso gestire setup tecnico completo: dominio, hosting, email professionali, SSL e CDN, oppure lavorare su infrastruttura già esistente."
+          },
+          {
+            "question": "Il sito sarà responsive e mobile-friendly?",
+            "answer": "Si. Tutti i progetti sono mobile-first e ottimizzati per smartphone, tablet e desktop."
+          },
+          {
+            "question": "Dopo il lancio, offri assistenza e manutenzione?",
+            "answer": "Si, con pacchetti di manutenzione e supporto continuativo per evoluzioni del progetto."
+          }
+        ]
+      },
+      "final_cta": {
+        "title": "Iniziamo il Tuo Progetto",
+        "body": "Hai un progetto web in mente o vuoi rinnovare il tuo sito esistente? Contattami per una consulenza gratuita e valutiamo insieme la soluzione migliore.",
+        "button": {
+          "text": "Richiedi consulenza",
+          "href": "/#contatti"
+        }
+      },
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "pietro@pietrofranchitti.it",
+          "href": "mailto:pietro@pietrofranchitti.it"
+        },
+        {
+          "label": "Telefono",
+          "value": "+39 339 192 0613",
+          "href": "tel:+393391920613"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Pietro Franchitti",
+          "href": "https://www.linkedin.com/in/pietrofranchitti/",
+          "external": true
+        },
+        {
+          "label": "GitHub",
+          "value": "@PietroPione",
+          "href": "https://github.com/PietroPione",
+          "external": true
+        }
+      ],
+      "other_services": [
+        {
+          "text": "Consulenza SEO",
+          "href": "/consulenza-seo-torino"
+        },
+        {
+          "text": "Advertising",
+          "href": "/servizi-advertising-torino"
+        },
+        {
+          "text": "Corporate Communication",
+          "href": "/corporate-communication"
+        }
+      ],
+      "meta": {
+        "title": "Sviluppo Siti Web Torino | Frontend Developer React, WordPress, Shopify",
+        "description": "Frontend developer a Torino: sviluppo siti web e app con React, WordPress e Shopify. Progetti performanti, responsive e orientati ai risultati.",
+        "keywords": [
+          "sviluppo siti web torino",
+          "frontend developer torino",
+          "react developer torino",
+          "wordpress developer torino",
+          "shopify developer torino"
+        ]
+      }
+    },
+    {
+      "slug": "consulenza-seo-torino",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Servizi",
+          "href": "/#servizi"
+        },
+        {
+          "label": "SEO"
+        }
+      ],
+      "hero": {
+        "title": "Consulenza SEO e Ottimizzazione per Motori di Ricerca",
+        "subtitle": "SEO Specialist a Torino con esperienza dal 2019 nell'ottimizzazione di siti web per i motori di ricerca. Aiuto aziende e professionisti a migliorare il posizionamento organico su Google, aumentare la visibilita online e generare traffico qualificato attraverso strategie SEO data-driven."
+      },
+      "service_blocks": [
+        {
+          "title": "Audit SEO Tecnico",
+          "body": "Analisi completa dello stato di salute SEO del sito per identificare problemi tecnici che penalizzano indicizzazione e ranking.",
+          "list_title": "Cosa analizzo",
+          "items": [
+            "Core Web Vitals: LCP, FID, CLS",
+            "Mobile-friendliness",
+            "Crawlability e indexability: robots.txt, sitemap.xml, canonical, noindex",
+            "Architettura del sito: URL, internal linking, profondità pagine",
+            "Errori tecnici: 404, redirect loop, contenuti duplicati",
+            "HTTPS e sicurezza: SSL, mixed content",
+            "Schema.org: markup strutturato"
+          ],
+          "deliverable": "Deliverable: report con priorità alto/medio/basso impatto e roadmap operativa."
+        },
+        {
+          "title": "Keyword Research & Strategy",
+          "body": "Identificazione delle keyword strategiche che portano traffico qualificato e conversioni.",
+          "list_title": "Metodologia",
+          "items": [
+            "Analisi search intent",
+            "Volume di ricerca",
+            "Difficoltà SEO",
+            "Long-tail keywords",
+            "Keyword mapping",
+            "Analisi competitor"
+          ],
+          "tools_title": "Strumenti utilizzati",
+          "tools": [
+            "Google Keyword Planner",
+            "Semrush",
+            "Ahrefs",
+            "Ubersuggest",
+            "Google Search Console",
+            "Google Trends"
+          ]
+        },
+        {
+          "title": "Ottimizzazione On-Page",
+          "body": "Ottimizzazione dei contenuti e degli elementi on-page per aumentare rilevanza, CTR e qualità dell'esperienza utente.",
+          "items": [
+            "Title tag e meta description",
+            "Header tags (H1, H2, H3)",
+            "Ottimizzazione contenuti e leggibilità",
+            "Immagini: alt text, compressione, lazy loading, WebP",
+            "URL structure keyword-rich",
+            "Internal linking",
+            "Schema markup",
+            "Aggiornamento contenuti obsoleti"
+          ]
+        },
+        {
+          "title": "Content Strategy & SEO Copywriting",
+          "body": "Strategia contenuti SEO pensata per le persone e per i motori di ricerca.",
+          "items": [
+            "Blog post SEO-friendly",
+            "Pagine servizi/prodotti",
+            "FAQ per ricerche vocali e featured snippet",
+            "Guide e tutorial pillar",
+            "Landing page orientate a conversione"
+          ],
+          "note": "Il mio background in comunicazione (Master Università di Torino) supporta una scrittura efficace sia SEO sia persuasiva."
+        },
+        {
+          "title": "Local SEO",
+          "body": "Ottimizzazione per ricerche locali, essenziale per business con presenza territoriale.",
+          "items": [
+            "Google Business Profile",
+            "NAP consistency",
+            "Local keywords geo-targetizzate",
+            "Citation building su directory locali",
+            "Strategia recensioni",
+            "Contenuti local"
+          ],
+          "note": "Obiettivo: presidiare Local Pack e Google Maps con segnali locali consistenti."
+        },
+        {
+          "title": "SEO per E-commerce",
+          "body": "Ottimizzazione SEO specifica per WooCommerce, Shopify, Magento e cataloghi ampi.",
+          "items": [
+            "Architettura categorie a silos",
+            "Schede prodotto uniche con rich snippet",
+            "Gestione duplicati e canonical",
+            "Recensioni prodotto con schema",
+            "Faceted navigation SEO-friendly",
+            "Blog e-commerce per top-funnel"
+          ]
+        }
+      ],
+      "method": {
+        "title": "Il Mio Metodo di Lavoro SEO",
+        "steps": [
+          "Analisi iniziale: audit, competitor, opportunità",
+          "Strategia e roadmap: priorità e timeline",
+          "Implementazione: tecnico, contenuti, link building",
+          "Monitoraggio: Search Console, Analytics, tool SEO",
+          "Reporting: KPI su posizionamenti, traffico, conversioni",
+          "Ottimizzazione continua"
+        ]
+      },
+      "technical_skills": {
+        "title": "Competenze Tecniche SEO",
+        "body": "Il vantaggio competitivo e la combinazione SEO + frontend development.",
+        "items": [
+          "Implementazione diretta delle ottimizzazioni tecniche",
+          "Ottimizzazione Core Web Vitals",
+          "Schema markup JSON-LD",
+          "Configurazione robots.txt, sitemap, canonical",
+          "Risoluzione problemi di crawlability e indicizzazione"
+        ],
+        "certifications": [
+          "SEO - LinkedIn Assessment (2022)",
+          "Content & Creative Design, Marketing Fundamentals & Strategy - LinkedIn (2022)",
+          "Master in Marketing, Sales & Digital Communication - Università di Torino (2017)"
+        ]
+      },
+      "tools": {
+        "title": "Strumenti e Software Utilizzati",
+        "items": [
+          "Google Search Console",
+          "Google Analytics 4",
+          "Semrush / Ahrefs",
+          "PageSpeed Insights / GTmetrix",
+          "Ubersuggest",
+          "Yoast SEO / Rank Math"
+        ]
+      },
+      "synergy": {
+        "title": "SEO + Web Development: il Binomio Perfetto",
+        "body": "La SEO tecnica richiede competenze di sviluppo. Gestire entrambe le aree accelera risultati e qualità.",
+        "items": [
+          "Siti nativamente SEO-friendly",
+          "Ottimizzazione Core Web Vitals sul codice",
+          "Supporto SSR per React/Angular quando utile",
+          "Redirect 301, canonical, hreflang configurati correttamente",
+          "Sitemap XML dinamiche"
+        ]
+      },
+      "experience": {
+        "title": "Esperienza SEO",
+        "body": "Dal 2019 gestisco progetti SEO per PMI, e-commerce, professionisti e startup in settori tech, turismo, B2B e servizi professionali.",
+        "items": [
+          "Meta & Linkedin Adv + SEO | Freelance | 2019 - presente",
+          "Corporate Marketing & Communications + SEO | Idrocentro | 2020 - presente",
+          "WordPress Developer (con ottimizzazione SEO) | Imperfect Comunicazione | 2022 - presente"
+        ]
+      },
+      "faq": {
+        "title": "Domande Frequenti sulla SEO",
+        "items": [
+          {
+            "question": "Quanto tempo ci vuole per vedere risultati SEO?",
+            "answer": "I primi segnali arrivano in genere dopo 2-3 mesi. Risultati stabili richiedono spesso 6-12 mesi, in base a competitività e punto di partenza."
+          },
+          {
+            "question": "Cosa include un audit SEO?",
+            "answer": "Analisi tecnica, on-page, off-page, competitor e roadmap prioritaria di interventi."
+          },
+          {
+            "question": "Lavori solo su WordPress?",
+            "answer": "No. Lavoro su WordPress, Shopify, React/Angular e CMS proprietari."
+          },
+          {
+            "question": "Offri garanzie di posizionamento?",
+            "answer": "Non esistono garanzie serie su posizione esatta. Garantisco metodo, trasparenza e monitoraggio KPI."
+          },
+          {
+            "question": "Quanto costa un servizio SEO?",
+            "answer": "Dipende dal progetto: audit da circa 500-1000 euro, retainer mensile da 500 a 2000+ euro."
+          },
+          {
+            "question": "SEO o Google Ads: cosa conviene?",
+            "answer": "Ads porta risultati immediati, SEO costruisce crescita organica nel tempo. La combinazione è spesso la strategia migliore."
+          }
+        ]
+      },
+      "final_cta": {
+        "title": "Richiedi un Audit SEO",
+        "body": "Vuoi migliorare il posizionamento del tuo sito su Google? Contattami per un'analisi preliminare gratuita e consigli strategici senza impegno.",
+        "button": {
+          "text": "Contattami",
+          "href": "/#contatti"
+        }
+      },
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "pietro@pietrofranchitti.it",
+          "href": "mailto:pietro@pietrofranchitti.it"
+        },
+        {
+          "label": "Telefono",
+          "value": "+39 339 192 0613",
+          "href": "tel:+393391920613"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Pietro Franchitti",
+          "href": "https://www.linkedin.com/in/pietrofranchitti/",
+          "external": true
+        }
+      ],
+      "other_services": [
+        {
+          "text": "Sviluppo Web",
+          "href": "/sviluppo-siti-web-torino"
+        },
+        {
+          "text": "Advertising",
+          "href": "/servizi-advertising-torino"
+        },
+        {
+          "text": "Corporate Communication",
+          "href": "/corporate-communication"
+        }
+      ],
+      "meta": {
+        "title": "Consulenza SEO Torino | Audit, Strategia e Ottimizzazione Tecnica",
+        "description": "Consulenza SEO a Torino: audit tecnico, keyword research, on-page, local SEO e strategie data-driven per aumentare traffico organico e conversioni.",
+        "keywords": [
+          "consulenza seo torino",
+          "seo specialist torino",
+          "audit seo",
+          "ottimizzazione motori di ricerca",
+          "local seo torino"
+        ]
+      }
+    },
+    {
+      "slug": "servizi-advertising-torino",
+      "breadcrumbs": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Servizi",
+          "href": "/#servizi"
+        },
+        {
+          "label": "Advertising"
+        }
+      ],
+      "hero": {
+        "title": "Digital Advertising: Meta, Google e LinkedIn Ads",
+        "subtitle": "Advertising Specialist a Torino con esperienza dal 2019 nella gestione di campagne su Meta (Facebook/Instagram), Google Ads e LinkedIn. Supporto aziende, e-commerce e professionisti con strategie multi-piattaforma orientate a ROI e crescita."
+      },
+      "platform_intro": {
+        "title": "Piattaforme Advertising: Quale Scegliere?",
+        "body": "Ogni piattaforma ha punti di forza specifici. La strategia piu efficace combina canali diversi in base a obiettivi, funnel e budget."
+      },
+      "platforms": [
+        {
+          "title": "Meta Ads (Facebook & Instagram)",
+          "ideal_for": [
+            "E-commerce con prodotti visuali",
+            "Brand awareness e engagement",
+            "Lead generation B2C",
+            "Remarketing visuale",
+            "Targeting per interessi"
+          ],
+          "advantages": "CPL/CPC competitivi, formato visual-first, reach molto ampia, remarketing potente.",
+          "minimum_budget": "Budget minimo consigliato: 500-1.000 euro/mese"
+        },
+        {
+          "title": "Google Ads (Search, Display, Shopping)",
+          "ideal_for": [
+            "Domanda attiva su Google",
+            "E-commerce con Shopping Ads",
+            "Lead generation locale e B2B",
+            "Keyword ad alto intento",
+            "Brand awareness su Display"
+          ],
+          "advantages": "Intent elevato, conversioni rapide, formati flessibili, copertura ampia.",
+          "minimum_budget": "Budget minimo consigliato: 500-1.500 euro/mese"
+        },
+        {
+          "title": "LinkedIn Ads",
+          "ideal_for": [
+            "B2B e vendite enterprise",
+            "Decision maker e ruoli senior",
+            "Lead generation professionale",
+            "Account-Based Marketing",
+            "Thought leadership B2B"
+          ],
+          "advantages": "Targeting B2B unico, lead qualificati, contesto professionale.",
+          "minimum_budget": "Budget minimo consigliato: 1.000-2.000 euro/mese"
+        }
+      ],
+      "service_blocks": [
+        {
+          "title": "Meta Ads: Facebook & Instagram",
+          "body": "Campagne orientate a lead, vendite, awareness e remarketing.",
+          "items": [
+            "Lead Generation: form nativi, targeting avanzato, integrazione CRM",
+            "E-commerce: cataloghi, Dynamic Product Ads, remarketing carrelli",
+            "Brand Awareness: reach, video views, crescita audience",
+            "Remarketing su visitatori, engagement e clienti esistenti",
+            "A/B testing su creativita, copy e pubblici"
+          ],
+          "subsections": [
+            {
+              "title": "Targeting Meta Ads",
+              "items": [
+                "Core Audiences",
+                "Custom Audiences",
+                "Lookalike Audiences",
+                "Advantage+ Audiences"
+              ]
+            },
+            {
+              "title": "Creatività e Formati",
+              "items": [
+                "Single Image, Video, Carousel, Collection",
+                "Stories e Reels",
+                "Copywriting persuasivo",
+                "Testing continuo"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Google Ads: Search, Display & Shopping",
+          "body": "Gestione completa di campagne Search, Display e Shopping con focus su qualità traffico e conversioni.",
+          "subsections": [
+            {
+              "title": "Google Search",
+              "items": [
+                "Keyword research strategica",
+                "Struttura campagne e ad groups",
+                "RSA ottimizzati",
+                "Estensioni annuncio",
+                "Negative keywords",
+                "Smart Bidding",
+                "RLSA"
+              ]
+            },
+            {
+              "title": "Google Display",
+              "items": [
+                "Responsive Display Ads",
+                "Targeting contestuale",
+                "Audience targeting",
+                "Gmail Ads"
+              ]
+            },
+            {
+              "title": "Google Shopping",
+              "items": [
+                "Setup Merchant Center",
+                "Feed optimization",
+                "Standard Shopping",
+                "Performance Max",
+                "Dynamic remarketing"
+              ]
+            },
+            {
+              "title": "Quality Score e Ottimizzazione",
+              "items": [
+                "Rilevanza annunci",
+                "CTR atteso",
+                "Landing page experience",
+                "Estensioni per aumentare CTR"
+              ]
+            }
+          ],
+          "note": "Certificazione Google Ads Display & Search (2023)."
+        },
+        {
+          "title": "LinkedIn Ads: Advertising B2B",
+          "body": "Strategie LinkedIn per lead B2B qualificati e account target.",
+          "subsections": [
+            {
+              "title": "Formati LinkedIn Ads",
+              "items": [
+                "Sponsored Content",
+                "Lead Gen Forms",
+                "Message Ads",
+                "Text e Dynamic Ads"
+              ]
+            },
+            {
+              "title": "ABM e Targeting",
+              "items": [
+                "Account-Based Marketing",
+                "Targeting per job title, function, seniority",
+                "Targeting per azienda, size, industry",
+                "Matched Audiences"
+              ]
+            }
+          ]
+        }
+      ],
+      "integrated_strategy": {
+        "title": "Strategia Advertising Integrata Multi-Piattaforma",
+        "examples": [
+          {
+            "title": "E-commerce",
+            "steps": [
+              "Top Funnel: Meta video/reach + Google Display",
+              "Middle Funnel: remarketing Meta + Google Search non-brand",
+              "Bottom Funnel: Google Shopping + Search brand + remarketing carrello",
+              "Retention: campagne clienti esistenti + email automation"
+            ]
+          },
+          {
+            "title": "B2B",
+            "steps": [
+              "Awareness: LinkedIn Sponsored Content + Display",
+              "Engagement: Document Ads + remarketing",
+              "Lead Gen: LinkedIn Lead Gen Forms + Google Search",
+              "Nurturing: Message Ads + remarketing cross-platform",
+              "Conversione: Search brand + ABM"
+            ]
+          }
+        ]
+      },
+      "method": {
+        "title": "Il Mio Metodo di Lavoro",
+        "steps": [
+          "Discovery e strategia: obiettivi, target, budget, competitor",
+          "Setup tecnico: pixel/tag, conversioni, cataloghi, analytics",
+          "Creazione campagne: struttura, targeting, creativita, copy",
+          "Lancio e testing: A/B test su audience e messaggi",
+          "Ottimizzazione continua: budget allocation e scaling",
+          "Reporting: dashboard e report periodici"
+        ]
+      },
+      "kpi": {
+        "title": "KPI e Metriche Monitorate",
+        "groups": [
+          {
+            "title": "Lead Generation",
+            "items": [
+              "CPL",
+              "Conversion rate",
+              "Lead quality",
+              "CPM/CTR/CPC"
+            ]
+          },
+          {
+            "title": "E-commerce",
+            "items": [
+              "ROAS",
+              "CPA",
+              "Conversion rate",
+              "AOV"
+            ]
+          },
+          {
+            "title": "Brand Awareness",
+            "items": [
+              "Reach",
+              "Impressions",
+              "CPM",
+              "Engagement rate",
+              "Video views"
+            ]
+          }
+        ]
+      },
+      "tracking": {
+        "title": "Tracking, Pixel e Analytics",
+        "items": [
+          "Meta Pixel e Conversions API",
+          "Google Ads Conversion Tracking e Enhanced Conversions",
+          "LinkedIn Insight Tag",
+          "Google Tag Manager",
+          "Google Analytics 4",
+          "Attribution modeling",
+          "Dashboard personalizzate"
+        ]
+      },
+      "budget": {
+        "title": "Budget Advertising: Quanto Investire?",
+        "platforms": [
+          {
+            "platform": "Meta Ads",
+            "test": "500-1.000 euro",
+            "pmi": "1.000-3.000 euro",
+            "structured": "3.000-15.000+ euro"
+          },
+          {
+            "platform": "Google Ads",
+            "test": "500-1.500 euro",
+            "pmi": "1.500-5.000 euro",
+            "structured": "5.000-20.000+ euro"
+          },
+          {
+            "platform": "LinkedIn Ads",
+            "test": "1.000-2.000 euro",
+            "pmi": "2.000-5.000 euro",
+            "structured": "5.000-20.000+ euro"
+          }
+        ],
+        "multi_platform": "Per strategie su 2-3 piattaforme, budget consigliato da 2.000-3.000 euro/mese.",
+        "fee": [
+          "Fee percentuale: 10-15% della spesa ads",
+          "Fee flat: 750+ euro/mese"
+        ]
+      },
+      "experience": {
+        "title": "Esperienza e Certificazioni",
+        "items": [
+          "Meta & LinkedIn Adv + SEO | Freelance | 2019 - presente",
+          "Corporate Marketing & Communications + SEO | Idrocentro | 2020 - presente"
+        ],
+        "body": "Dal 2019 gestisco campagne advertising per e-commerce, lead generation, B2B e local business in settori diversi.",
+        "certifications": [
+          "Google Ads Display & Search - Certificato Google (2023)",
+          "Master in Marketing, Sales & Digital Communication - Università di Torino (2017)",
+          "Content & Creative Design, Marketing Fundamentals & Strategy - LinkedIn (2022)"
+        ]
+      },
+      "faq": {
+        "title": "Domande Frequenti",
+        "items": [
+          {
+            "question": "Quale piattaforma advertising è meglio per la mia azienda?",
+            "answer": "Dipende da obiettivi e funnel. Google intercetta domanda attiva, Meta accelera awareness e conversioni e-commerce, LinkedIn è ideale per B2B."
+          },
+          {
+            "question": "Quanto budget serve per campagne efficaci?",
+            "answer": "Per test iniziali da 500-1.000 euro/mese su una piattaforma. Per strategie strutturate, in genere da 2.000 euro/mese in su."
+          },
+          {
+            "question": "Quanto tempo ci vuole per vedere risultati?",
+            "answer": "I primi risultati possono arrivare subito, ma servono 30-60 giorni per ottimizzare e stabilizzare performance e ROI."
+          },
+          {
+            "question": "Perchè non posso gestire da solo le campagne?",
+            "answer": "Sarebbe possibile, ma senza competenze avanzate si rischia di sprecare budget. Strategia, creatività, bidding e testing fanno la differenza."
+          },
+          {
+            "question": "Devo usare tutte le piattaforme?",
+            "answer": "No. Si puo partire da una piattaforma e scalare in seguito verso una strategia integrata."
+          },
+          {
+            "question": "Quanto costa la gestione campagne?",
+            "answer": "In base a budget e complessita: tipicamente 10-15% del budget ads oppure fee flat mensile."
+          }
+        ]
+      },
+      "final_cta": {
+        "title": "Lancia le Tue Campagne Advertising",
+        "body": "Vuoi acquisire clienti online, aumentare vendite e-commerce o generare lead B2B qualificati? Contattami per una consulenza strategica gratuita.",
+        "button": {
+          "text": "Parliamone",
+          "href": "/#contatti"
+        }
+      },
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "pietro@pietrofranchitti.it",
+          "href": "mailto:pietro@pietrofranchitti.it"
+        },
+        {
+          "label": "Telefono",
+          "value": "+39 339 192 0613",
+          "href": "tel:+393391920613"
+        },
+        {
+          "label": "LinkedIn",
+          "value": "Pietro Franchitti",
+          "href": "https://www.linkedin.com/in/pietrofranchitti/",
+          "external": true
+        }
+      ],
+      "other_services": [
+        {
+          "text": "SEO & Posizionamento Organico",
+          "href": "/consulenza-seo-torino"
+        },
+        {
+          "text": "Sviluppo Web & E-commerce",
+          "href": "/sviluppo-siti-web-torino"
+        },
+        {
+          "text": "Corporate Communications",
+          "href": "/corporate-communication"
+        }
+      ],
+      "meta": {
+        "title": "Advertising Torino | Meta, Google e LinkedIn Ads",
+        "description": "Gestione campagne advertising a Torino su Meta, Google e LinkedIn. Strategia multi-piattaforma, tracking avanzato e ottimizzazione ROI.",
+        "keywords": [
+          "advertising torino",
+          "meta ads torino",
+          "google ads torino",
+          "linkedin ads b2b",
+          "consulente digital advertising"
         ]
       }
     }
