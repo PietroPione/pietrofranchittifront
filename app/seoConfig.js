@@ -1,5 +1,5 @@
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.pietrofranchitti.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://pietrofranchitti.it";
 
 export const defaultTitle = "Frontend Developer a Torino | Pietro Franchitti";
 

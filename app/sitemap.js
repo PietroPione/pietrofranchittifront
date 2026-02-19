@@ -3,20 +3,29 @@ import seoPages from "./seo-pages.json";
 import { siteUrl } from "./seoConfig";
 
 const staticPaths = ["", "/chi_sono", "/portfolio", "/cookie-policy"];
+const baseUrl = siteUrl.replace(/\/+$/, "");
+
+const toIsoDate = (value) => {
+  const date = value ? new Date(value) : new Date();
+  if (Number.isNaN(date.getTime())) {
+    return new Date().toISOString();
+  }
+  return date.toISOString();
+};
 
 export default async function sitemap() {
-  const now = new Date();
+  const nowIso = toIsoDate();
 
   const staticEntries = staticPaths.map((path) => ({
-    url: `${siteUrl}${path}`,
-    lastModified: now,
+    url: `${baseUrl}${path}`,
+    lastModified: nowIso,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : 0.8,
   }));
 
   const seoEntries = (seoPages?.pages || []).map((page) => ({
-    url: `${siteUrl}/${page.slug}`,
-    lastModified: now,
+    url: `${baseUrl}/${page.slug}`,
+    lastModified: nowIso,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
@@ -30,8 +39,8 @@ export default async function sitemap() {
     portfolioEntries = portfolios
       .filter((item) => item?.uid)
       .map((item) => ({
-        url: `${siteUrl}/portfolio/${item.uid}`,
-        lastModified: item?.last_publication_date || now,
+        url: `${baseUrl}/portfolio/${item.uid}`,
+        lastModified: toIsoDate(item?.last_publication_date),
         changeFrequency: "monthly",
         priority: 0.7,
       }));
