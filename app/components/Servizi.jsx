@@ -20,7 +20,7 @@ export default function Servizi({ serviziSlice, id }) {
           </h2>
         </div>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {servizi.map((servizio, index) => {
           const linkField = Array.isArray(servizio?.ancora)
             ? servizio.ancora[0]
@@ -31,7 +31,7 @@ export default function Servizi({ serviziSlice, id }) {
           return (
             <div
               key={`${servizio?.nome_servizio || "servizio"}-${index}`}
-              className="flex flex-col items-start justify-end gap-4 aspect-square border border-black dark:border-white p-4"
+              className="flex flex-col items-start justify-end gap-4 w-full aspect-square border border-black dark:border-white p-4"
             >
               {servizio?.nome_servizio && (
                 <div className="text-4xl xl:text-3xl font-black uppercase leading-tight break-words">
