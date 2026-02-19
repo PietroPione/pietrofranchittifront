@@ -6,7 +6,7 @@ import seoPages from "../seo-pages.json";
 import { siteUrl } from "../seoConfig";
 import { createClient } from "@/prismicio";
 
-const slug = "corporate-communication";
+const slug = "sviluppo-siti-web-torino";
 const fallbackData = seoPages.pages.find((p) => p.slug === slug);
 
 const hasValue = (value) => {
@@ -35,28 +35,31 @@ const mapPrismicToData = (doc) => {
   const slices = doc?.data?.slices || [];
 
   const heroSlice = slices.find((slice) => slice.slice_type === "seo_hero");
-  const serviceBlocksSlice = slices.find((slice) => slice.slice_type === "seo_service_blocks");
-  const columnsSlice = slices.find((slice) => slice.slice_type === "seo_columns_sections");
+  const technologiesSlice = slices.find((slice) => slice.slice_type === "seo_technologies");
+  const listSectionsSlice = slices.find((slice) => slice.slice_type === "seo_list_sections");
+  const actionLinksSlice = slices.find(
+    (slice) =>
+      slice.slice_type === "seo_action_links" &&
+      (!slice?.primary?.section_key || slice?.primary?.section_key === "portfolio")
+  );
   const faqSlice = slices.find((slice) => slice.slice_type === "seo_faq");
   const finalCtaSlice = slices.find((slice) => slice.slice_type === "seo_final_cta");
   const relatedServicesSlice = slices.find((slice) => slice.slice_type === "seo_related_services");
 
-  const columnSections = columnsSlice?.primary?.sections || [];
-  const byKey = (key) => columnSections.find((section) => section?.section_key === key);
+  const listSections = listSectionsSlice?.primary?.sections || [];
+  const byKey = (key) => listSections.find((section) => section?.section_key === key);
 
-  const mapColumnSection = (key) => {
+  const mapListSection = (key) => {
     const section = byKey(key);
     if (!section?.title) return null;
 
-    const mapped = {
+    return {
       title: section.title,
-      items: listFromRichText(section.items)
+      body: section.body,
+      items: listFromRichText(section.items),
+      ordered: !!section.ordered,
+      note: section.note
     };
-
-    if (section.body) mapped.body = section.body;
-    if (section.note) mapped.note = section.note;
-
-    return mapped;
   };
 
   const rawKeywords = doc?.data?.meta_keywords || "";
@@ -68,41 +71,54 @@ const mapPrismicToData = (doc) => {
   return {
     slug: doc.uid,
     breadcrumbs:
-      doc?.data?.breadcrumbs?.map((item) => ({
-        label: item?.label,
-        href: asLink(item?.href) || undefined
-      })).filter((item) => item?.label) || [],
+      doc?.data?.breadcrumbs
+        ?.map((item) => ({
+          label: item?.label,
+          href: asLink(item?.href) || undefined
+        }))
+        .filter((item) => item?.label) || [],
     hero: {
       title: heroSlice?.primary?.title || "",
       subtitle: heroSlice?.primary?.subtitle || ""
     },
-    service_blocks:
-      serviceBlocksSlice?.primary?.blocks
-        ?.map((block) => ({
-          title: block?.title,
-          body: block?.body,
-          list_title: block?.list_title,
-          items: listFromRichText(block?.items),
-          tools_title: block?.tools_title,
-          tools: block?.tools
-            ? block.tools.split(",").map((item) => item.trim()).filter(Boolean)
-            : undefined,
-          note: block?.note
+    technologies_section_title: technologiesSlice?.primary?.section_title,
+    technologies:
+      technologiesSlice?.primary?.technologies
+        ?.map((tech) => ({
+          title: tech?.title,
+          body: tech?.body,
+          services_title: tech?.services_title,
+          services: listFromRichText(tech?.services),
+          skills_title: tech?.skills_title,
+          skills: listFromRichText(tech?.skills),
+          note: tech?.note
         }))
-        .filter((block) => block?.title || block?.body || block?.items?.length > 0) || [],
-    method: mapColumnSection("method"),
-    competitive_advantage: mapColumnSection("competitive_advantage"),
-    experience: mapColumnSection("experience"),
-    education: mapColumnSection("education"),
-    when_to_hire: mapColumnSection("when_to_hire"),
-    sectors: mapColumnSection("sectors"),
+        .filter((tech) => tech?.title || tech?.body) || [],
+    process: mapListSection("process"),
+    complementary_skills: mapListSection("complementary_skills"),
+    certifications: mapListSection("certifications"),
+    experience: mapListSection("experience"),
+    portfolio: {
+      title: actionLinksSlice?.primary?.title,
+      body: actionLinksSlice?.primary?.body,
+      links:
+        actionLinksSlice?.primary?.links
+          ?.map((item) => ({
+            text: item?.text,
+            href: asLink(item?.href) || undefined,
+            external: !!item?.external
+          }))
+          .filter((item) => item?.text && item?.href) || []
+    },
     faq: {
       title: faqSlice?.primary?.title,
       items:
-        faqSlice?.primary?.items?.map((item) => ({
-          question: item?.question,
-          answer: item?.answer
-        })).filter((item) => item?.question || item?.answer) || []
+        faqSlice?.primary?.items
+          ?.map((item) => ({
+            question: item?.question,
+            answer: item?.answer
+          }))
+          .filter((item) => item?.question || item?.answer) || []
     },
     final_cta: {
       title: finalCtaSlice?.primary?.title,
@@ -113,17 +129,21 @@ const mapPrismicToData = (doc) => {
       }
     },
     contacts:
-      finalCtaSlice?.primary?.contacts?.map((contact) => ({
-        label: contact?.label,
-        value: contact?.value,
-        href: asLink(contact?.href) || undefined,
-        external: !!contact?.external
-      })).filter((contact) => contact?.label || contact?.value) || [],
+      finalCtaSlice?.primary?.contacts
+        ?.map((contact) => ({
+          label: contact?.label,
+          value: contact?.value,
+          href: asLink(contact?.href) || undefined,
+          external: !!contact?.external
+        }))
+        .filter((contact) => contact?.label || contact?.value) || [],
     other_services:
-      relatedServicesSlice?.primary?.links?.map((item) => ({
-        text: item?.text,
-        href: asLink(item?.href) || "/"
-      })).filter((item) => item?.text) || [],
+      relatedServicesSlice?.primary?.links
+        ?.map((item) => ({
+          text: item?.text,
+          href: asLink(item?.href) || "/"
+        }))
+        .filter((item) => item?.text) || [],
     meta: {
       title: doc?.data?.meta_title,
       description: doc?.data?.meta_description,
@@ -146,51 +166,42 @@ const mergePageData = (prismicData, fallback) => {
       title: pickValue(prismicData?.hero?.title, fallback?.hero?.title),
       subtitle: pickValue(prismicData?.hero?.subtitle, fallback?.hero?.subtitle)
     },
-    service_blocks: pickValue(prismicData.service_blocks, fallback.service_blocks),
-    method: {
-      ...fallback.method,
-      ...prismicData.method,
-      title: pickValue(prismicData?.method?.title, fallback?.method?.title),
-      items: pickValue(prismicData?.method?.items, fallback?.method?.steps || fallback?.method?.items)
+    technologies_section_title: pickValue(
+      prismicData.technologies_section_title,
+      fallback?.technologies_section_title
+    ),
+    technologies: pickValue(prismicData.technologies, fallback.technologies),
+    process: {
+      ...fallback.process,
+      ...prismicData.process,
+      title: pickValue(prismicData?.process?.title, fallback?.process?.title),
+      steps: pickValue(prismicData?.process?.items, fallback?.process?.steps)
     },
-    competitive_advantage: {
-      ...fallback.competitive_advantage,
-      ...prismicData.competitive_advantage,
-      title: pickValue(
-        prismicData?.competitive_advantage?.title,
-        fallback?.competitive_advantage?.title
-      ),
-      items: pickValue(
-        prismicData?.competitive_advantage?.items,
-        fallback?.competitive_advantage?.items
-      )
+    complementary_skills: {
+      ...fallback.complementary_skills,
+      ...prismicData.complementary_skills,
+      title: pickValue(prismicData?.complementary_skills?.title, fallback?.complementary_skills?.title),
+      body: pickValue(prismicData?.complementary_skills?.body, fallback?.complementary_skills?.body),
+      items: pickValue(prismicData?.complementary_skills?.items, fallback?.complementary_skills?.items)
+    },
+    portfolio: {
+      ...fallback.portfolio,
+      ...prismicData.portfolio,
+      title: pickValue(prismicData?.portfolio?.title, fallback?.portfolio?.title),
+      body: pickValue(prismicData?.portfolio?.body, fallback?.portfolio?.body),
+      links: pickValue(prismicData?.portfolio?.links, fallback?.portfolio?.links)
+    },
+    certifications: {
+      ...fallback.certifications,
+      ...prismicData.certifications,
+      title: pickValue(prismicData?.certifications?.title, fallback?.certifications?.title),
+      items: pickValue(prismicData?.certifications?.items, fallback?.certifications?.items)
     },
     experience: {
       ...fallback.experience,
       ...prismicData.experience,
       title: pickValue(prismicData?.experience?.title, fallback?.experience?.title),
-      body: pickValue(prismicData?.experience?.body, fallback?.experience?.body),
       items: pickValue(prismicData?.experience?.items, fallback?.experience?.items)
-    },
-    education: {
-      ...fallback.education,
-      ...prismicData.education,
-      title: pickValue(prismicData?.education?.title, fallback?.education?.title),
-      body: pickValue(prismicData?.education?.body, fallback?.education?.body),
-      items: pickValue(prismicData?.education?.items, fallback?.education?.items),
-      note: pickValue(prismicData?.education?.note, fallback?.education?.note)
-    },
-    when_to_hire: {
-      ...fallback.when_to_hire,
-      ...prismicData.when_to_hire,
-      title: pickValue(prismicData?.when_to_hire?.title, fallback?.when_to_hire?.title),
-      items: pickValue(prismicData?.when_to_hire?.items, fallback?.when_to_hire?.items)
-    },
-    sectors: {
-      ...fallback.sectors,
-      ...prismicData.sectors,
-      title: pickValue(prismicData?.sectors?.title, fallback?.sectors?.title),
-      items: pickValue(prismicData?.sectors?.items, fallback?.sectors?.items)
     },
     faq: {
       ...fallback.faq,
@@ -235,7 +246,7 @@ async function getPageData() {
   return fallbackData;
 }
 
-export default async function CorporateCommunicationPage() {
+export default async function SviluppoSitiWebTorinoPage() {
   const data = await getPageData();
   if (!data) return notFound();
 
@@ -267,57 +278,97 @@ export default async function CorporateCommunicationPage() {
         <p className="text-16 md:text-20 max-w-[80ch]">{data.hero?.subtitle}</p>
       </section>
 
-      {data?.service_blocks?.length > 0 && (
+      {data?.technologies?.length > 0 && (
         <section className="space-y-8 md:space-y-12">
-          <h2 className="text-32 md:text-46 font-bold">Servizi Corporate Communications & Marketing</h2>
+          <h2 className="text-32 md:text-46 font-bold">
+            {data.technologies_section_title || "Tecnologie e Framework"}
+          </h2>
           <div className="space-y-10 md:space-y-12">
-            {data.service_blocks.map((block, index) => (
-              <article key={`${block?.title || "block"}-${index}`} className="space-y-4">
-                <h3 className="text-26 md:text-36 font-bold">{block?.title}</h3>
-                {block?.body && <p>{block.body}</p>}
+            {data.technologies.map((tech, index) => (
+              <article key={`${tech?.title || "tech"}-${index}`} className="space-y-4">
+                <h3 className="text-26 md:text-36 font-bold">{tech?.title}</h3>
+                {tech?.body && <p>{tech.body}</p>}
 
-                {block?.list_title && (
-                  <h4 className="text-20 md:text-26 font-semibold pt-2">{block.list_title}</h4>
+                {tech?.services_title && (
+                  <h4 className="text-20 md:text-26 font-semibold pt-2">{tech.services_title}</h4>
                 )}
-                {block?.items?.length > 0 && (
+                {tech?.services?.length > 0 && (
                   <ul className="space-y-2">
-                    {block.items.map((item, i) => (
+                    {tech.services.map((item, i) => (
                       <li key={`${item}-${i}`}>- {item}</li>
                     ))}
                   </ul>
                 )}
 
-                {block?.tools_title && (
-                  <h4 className="text-20 md:text-26 font-semibold pt-2">{block.tools_title}</h4>
+                {tech?.skills_title && (
+                  <h4 className="text-20 md:text-26 font-semibold pt-2">{tech.skills_title}</h4>
                 )}
-                {block?.tools?.length > 0 && <p>{block.tools.join(", ")}</p>}
+                {tech?.skills?.length > 0 && (
+                  <ul className="space-y-2">
+                    {tech.skills.map((item, i) => (
+                      <li key={`${item}-${i}`}>- {item}</li>
+                    ))}
+                  </ul>
+                )}
 
-                {block?.note && <p className="italic">{block.note}</p>}
+                {tech?.note && <p className="italic">{tech.note}</p>}
               </article>
             ))}
           </div>
         </section>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-        {data?.method?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
-            <h2 className="text-32 md:text-46 font-bold">{data.method.title}</h2>
-            <ol className="space-y-2">
-              {data.method.items.map((step, index) => (
-                <li key={`${step}-${index}`}>
-                  {index + 1}. {step}
-                </li>
-              ))}
-            </ol>
-          </section>
-        )}
+      {(data?.process?.steps?.length > 0 || data?.process?.items?.length > 0) && (
+        <section className="space-y-4">
+          <h2 className="text-32 md:text-46 font-bold">{data.process.title}</h2>
+          <ol className="space-y-2">
+            {(data.process.steps || data.process.items || []).map((step, index) => (
+              <li key={`${step}-${index}`}>
+                {index + 1}. {step}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
-        {data?.competitive_advantage?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
-            <h2 className="text-32 md:text-46 font-bold">{data.competitive_advantage.title}</h2>
+      {data?.complementary_skills?.items?.length > 0 && (
+        <section className="space-y-4">
+          <h2 className="text-32 md:text-46 font-bold">{data.complementary_skills.title}</h2>
+          {data.complementary_skills.body && <p>{data.complementary_skills.body}</p>}
+          <ul className="space-y-2">
+            {data.complementary_skills.items.map((item, index) => (
+              <li key={`${item}-${index}`}>- {item}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {(data?.portfolio?.title || data?.portfolio?.body || data?.portfolio?.links?.length > 0) && (
+        <section className="space-y-4">
+          <h2 className="text-32 md:text-46 font-bold">{data.portfolio.title}</h2>
+          {data.portfolio.body && <p>{data.portfolio.body}</p>}
+          {data.portfolio?.links?.length > 0 && (
+            <div className="flex flex-wrap gap-4 pt-2">
+              {data.portfolio.links.map((item, index) => (
+                <BasicButton
+                  key={`${item?.text || "portfolio-link"}-${index}`}
+                  testo={item?.text}
+                  link={item?.href}
+                  externalLink={item?.external}
+                  scaleHover
+                />
+              ))}
+            </div>
+          )}
+        </section>
+      )}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {data?.certifications?.items?.length > 0 && (
+          <section className="space-y-4">
+            <h2 className="text-32 md:text-46 font-bold">{data.certifications.title}</h2>
             <ul className="space-y-2">
-              {data.competitive_advantage.items.map((item, index) => (
+              {data.certifications.items.map((item, index) => (
                 <li key={`${item}-${index}`}>- {item}</li>
               ))}
             </ul>
@@ -325,45 +376,10 @@ export default async function CorporateCommunicationPage() {
         )}
 
         {data?.experience?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
+          <section className="space-y-4">
             <h2 className="text-32 md:text-46 font-bold">{data.experience.title}</h2>
-            {data.experience.body && <p>{data.experience.body}</p>}
             <ul className="space-y-2">
               {data.experience.items.map((item, index) => (
-                <li key={`${item}-${index}`}>- {item}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {data?.education?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
-            <h2 className="text-32 md:text-46 font-bold">{data.education.title}</h2>
-            <ul className="space-y-2">
-              {data.education.items.map((item, index) => (
-                <li key={`${item}-${index}`}>- {item}</li>
-              ))}
-            </ul>
-            {data.education.note && <p className="italic">{data.education.note}</p>}
-          </section>
-        )}
-
-        {data?.when_to_hire?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
-            <h2 className="text-32 md:text-46 font-bold">{data.when_to_hire.title}</h2>
-            <ul className="space-y-2">
-              {data.when_to_hire.items.map((item, index) => (
-                <li key={`${item}-${index}`}>- {item}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {data?.sectors?.items?.length > 0 && (
-          <section className="space-y-4 border border-black dark:border-white p-4 md:p-6">
-            <h2 className="text-32 md:text-46 font-bold">{data.sectors.title}</h2>
-            <ul className="space-y-2">
-              {data.sectors.items.map((item, index) => (
                 <li key={`${item}-${index}`}>- {item}</li>
               ))}
             </ul>
@@ -428,7 +444,7 @@ export default async function CorporateCommunicationPage() {
 
       {data?.other_services?.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-32 md:text-46 font-bold">Servizi Complementari</h2>
+          <h2 className="text-32 md:text-46 font-bold">Altri Servizi</h2>
           <div className="flex flex-wrap gap-3">
             {data.other_services.map((item, index) => (
               <Link

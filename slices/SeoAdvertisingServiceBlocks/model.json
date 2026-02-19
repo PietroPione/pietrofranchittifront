@@ -1,0 +1,88 @@
+{
+  "id": "seo_advertising_service_blocks",
+  "type": "SharedSlice",
+  "name": "SeoAdvertisingServiceBlocks",
+  "description": "Advertising service blocks with subsections",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section title",
+            "placeholder": "Servizi Advertising"
+          }
+        },
+        "blocks": {
+          "type": "Group",
+          "config": {
+            "label": "Blocks",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "Text",
+                "config": {
+                  "label": "Body",
+                  "placeholder": ""
+                }
+              },
+              "items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "subsections_content": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Subsections (H4 + list)",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "heading4,paragraph,list-item"
+                }
+              },
+              "tools_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Tools title",
+                  "placeholder": ""
+                }
+              },
+              "tools": {
+                "type": "Text",
+                "config": {
+                  "label": "Tools (comma separated)",
+                  "placeholder": ""
+                }
+              },
+              "note": {
+                "type": "Text",
+                "config": {
+                  "label": "Note",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

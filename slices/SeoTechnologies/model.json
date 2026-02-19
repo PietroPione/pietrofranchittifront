@@ -1,0 +1,88 @@
+{
+  "id": "seo_technologies",
+  "type": "SharedSlice",
+  "name": "SeoTechnologies",
+  "description": "Technology blocks for web development SEO page",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section title",
+            "placeholder": "Tecnologie e Framework"
+          }
+        },
+        "technologies": {
+          "type": "Group",
+          "config": {
+            "label": "Technologies",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "Text",
+                "config": {
+                  "label": "Body",
+                  "placeholder": ""
+                }
+              },
+              "services_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Services title",
+                  "placeholder": ""
+                }
+              },
+              "services": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Services",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "skills_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Skills title",
+                  "placeholder": ""
+                }
+              },
+              "skills": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Skills",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "note": {
+                "type": "Text",
+                "config": {
+                  "label": "Note",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

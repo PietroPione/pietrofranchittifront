@@ -1,0 +1,80 @@
+{
+  "id": "seo_action_links",
+  "type": "SharedSlice",
+  "name": "SeoActionLinks",
+  "description": "CTA section with action links",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_key": {
+          "type": "Select",
+          "config": {
+            "label": "Section key",
+            "placeholder": "",
+            "options": [
+              "results",
+              "portfolio"
+            ]
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "body": {
+          "type": "Text",
+          "config": {
+            "label": "Body",
+            "placeholder": ""
+          }
+        },
+        "links": {
+          "type": "Group",
+          "config": {
+            "label": "Links",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "Text",
+                  "placeholder": ""
+                }
+              },
+              "href": {
+                "type": "Link",
+                "config": {
+                  "label": "Href",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "external": {
+                "type": "Boolean",
+                "config": {
+                  "label": "External",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "seo_final_cta",
+  "type": "SharedSlice",
+  "name": "SeoFinalCta",
+  "description": "Final CTA with contacts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "body": {
+          "type": "Text",
+          "config": {
+            "label": "Body",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "contacts": {
+          "type": "Group",
+          "config": {
+            "label": "Contacts",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              },
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Value",
+                  "placeholder": ""
+                }
+              },
+              "href": {
+                "type": "Link",
+                "config": {
+                  "label": "Href",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "external": {
+                "type": "Boolean",
+                "config": {
+                  "label": "External",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -5,7 +5,6 @@ import WorkSchool from "./components/WorkSchool";
 import PortfolioHome from "./components/PortfolioHome";
 import ContattiHome from "./components/ContattiHome";
 import WhoIsPio from "./components/WhoIsPio";
-import CosePiacciono from "./components/CosePiacciono";
 import Servizi from "./components/Servizi";
 import {
   defaultDescription,
@@ -17,7 +16,6 @@ import {
 export default async function Page() {
   const client = createClient();
   const homepageResponse = await client.getSingle("homepage");
-  const biofalsaResponse = await client.getByType("biofalsa");
   const portfolioPagesResponse = await client.getAllByType("portfolio");
 
   const whoIsPioSlice = homepageResponse?.data?.slices?.find(
@@ -38,25 +36,20 @@ export default async function Page() {
   const serviziSlice = homepageResponse?.data?.slices?.find(
     (slice) => slice.slice_type === "servizi"
   );
-  const cosePiacciono = biofalsaResponse?.results[0]?.data?.slices?.find(
-    (slice) => slice.slice_type === "cose_piacciono"
-  );
-
-
-  const hasCosePiacciono =
-    !!cosePiacciono?.primary?.titolo_cose_piacciono ||
-    (cosePiacciono?.primary?.cosa?.length || 0) > 0;
-
   return (
     <div className="relative space-y-20 md:space-y-40">
       <BrutalHero />
       {whoIsPioSlice && <WhoIsPio whoIsPioSlice={whoIsPioSlice} id="who" />}
       {serviziSlice && <Servizi serviziSlice={serviziSlice} id="servizi" />}
-      {portfolioHome && <PortfolioHome portfolioHome={portfolioHome} portfolioPages={portfolioPagesResponse.results} id="portfolio" />}
+      {portfolioHome && (
+        <PortfolioHome
+          portfolioHome={portfolioHome}
+          portfolioPages={portfolioPagesResponse.results}
+          id="portfolio"
+        />
+      )}
       {workSchool && <WorkSchool workSchool={workSchool} id="cv" />}
-      {/* {hasCosePiacciono && <CosePiacciono cosePiacciono={cosePiacciono} />} */}
       {contattiHome && <ContattiHome contattiHome={contattiHome} id="contatti" />}
-
     </div>
   );
 }
@@ -66,26 +59,37 @@ export async function generateMetadata() {
   const homepageResponse = await client.getSingle("homepage");
 
   const title = homepageResponse?.data?.meta_title || defaultTitle;
-  const description =
-    homepageResponse?.data?.meta_description || defaultDescription;
+  const description = homepageResponse?.data?.meta_description || defaultDescription;
+
+  const rawKeywords = homepageResponse?.data?.meta_keywords || "";
+  const keywords = rawKeywords
+    ? rawKeywords
+        .split(",")
+        .map((item) => item.trim())
+        .filter(Boolean)
+    : defaultKeywords;
+
+  const metaImage = homepageResponse?.data?.meta_image?.url;
 
   return {
     title,
     description,
-    keywords: defaultKeywords,
+    keywords,
     alternates: { canonical: "/" },
     openGraph: {
       title,
       description,
       url: siteUrl,
-      images: homepageResponse?.data?.meta_image
-        ? [homepageResponse?.data?.meta_image.url]
-        : undefined,
+      siteName: "Pietro Franchitti",
+      locale: "it_IT",
+      type: "website",
+      images: metaImage ? [metaImage] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: metaImage ? [metaImage] : undefined,
     },
   };
 }

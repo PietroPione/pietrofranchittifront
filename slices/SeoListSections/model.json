@@ -1,0 +1,101 @@
+{
+  "id": "seo_list_sections",
+  "type": "SharedSlice",
+  "name": "SeoListSections",
+  "description": "Generic list sections for SEO pages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Sections",
+            "repeat": true,
+            "fields": {
+              "section_key": {
+                "type": "Select",
+                "config": {
+                  "label": "Section key",
+                  "placeholder": "",
+                  "options": [
+                    "method",
+                    "technical_skills",
+                    "tools",
+                    "synergy",
+                    "experience",
+                    "process",
+                    "complementary_skills",
+                    "certifications",
+                    "tracking"
+                  ]
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "Text",
+                "config": {
+                  "label": "Body",
+                  "placeholder": ""
+                }
+              },
+              "ordered": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Ordered list",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "secondary_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Secondary title",
+                  "placeholder": "Certificazioni"
+                }
+              },
+              "secondary_items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Secondary items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "note": {
+                "type": "Text",
+                "config": {
+                  "label": "Note",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

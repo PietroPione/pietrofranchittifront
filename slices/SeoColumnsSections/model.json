@@ -1,0 +1,73 @@
+{
+  "id": "seo_columns_sections",
+  "type": "SharedSlice",
+  "name": "SeoColumnsSections",
+  "description": "Two-column section cards",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Sections",
+            "repeat": true,
+            "fields": {
+              "section_key": {
+                "type": "Select",
+                "config": {
+                  "label": "Section key",
+                  "placeholder": "",
+                  "options": [
+                    "method",
+                    "competitive_advantage",
+                    "experience",
+                    "education",
+                    "when_to_hire",
+                    "sectors"
+                  ]
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "body": {
+                "type": "Text",
+                "config": {
+                  "label": "Body",
+                  "placeholder": ""
+                }
+              },
+              "items": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Items",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              },
+              "note": {
+                "type": "Text",
+                "config": {
+                  "label": "Note",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

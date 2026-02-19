@@ -1,5 +1,6 @@
 "use client";
 
+import { asLink } from "@prismicio/client";
 import BasicButton from "./BasicButton";
 
 export default function Servizi({ serviziSlice, id }) {
@@ -19,26 +20,32 @@ export default function Servizi({ serviziSlice, id }) {
           </h2>
         </div>
       )}
-      <div className="flex flex-wrap justify-between gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         {servizi.map((servizio, index) => {
-          const link = servizio?.ancora?.[0]?.url;
+          const linkField = Array.isArray(servizio?.ancora)
+            ? servizio.ancora[0]
+            : servizio?.ancora;
+          const link = asLink(linkField) || linkField?.url || undefined;
+          const externalLink = linkField?.target === "_blank";
+
           return (
             <div
               key={`${servizio?.nome_servizio || "servizio"}-${index}`}
-              className="flex flex-col items-start justify-end gap-4 w-full md:w-[48%] lg:w-[31%] aspect-square border border-black dark:border-white p-4"
+              className="flex flex-col items-start justify-end gap-4 aspect-square border border-black dark:border-white p-4"
             >
               {servizio?.nome_servizio && (
-                <div className="text-4xl font-black uppercase leading-tight break-words">
+                <div className="text-4xl xl:text-3xl font-black uppercase leading-tight break-words">
                   {servizio.nome_servizio}
                 </div>
               )}
-              {/* {servizio?.testo_tasto && link && (
+              {servizio?.testo_tasto && link && (
                 <BasicButton
                   testo={servizio.testo_tasto}
                   link={link}
+                  externalLink={externalLink}
                   scaleHover
                 />
-              )} */}
+              )}
             </div>
           );
         })}

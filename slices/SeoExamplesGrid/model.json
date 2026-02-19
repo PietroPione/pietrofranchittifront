@@ -1,0 +1,61 @@
+{
+  "id": "seo_examples_grid",
+  "type": "SharedSlice",
+  "name": "SeoExamplesGrid",
+  "description": "Grid of examples with ordered steps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_key": {
+          "type": "Select",
+          "config": {
+            "label": "Section key",
+            "placeholder": "",
+            "options": [
+              "integrated_strategy"
+            ]
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "examples": {
+          "type": "Group",
+          "config": {
+            "label": "Examples",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "steps": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Steps",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,list-item"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

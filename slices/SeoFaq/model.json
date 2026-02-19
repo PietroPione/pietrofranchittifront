@@ -1,0 +1,49 @@
+{
+  "id": "seo_faq",
+  "type": "SharedSlice",
+  "name": "SeoFaq",
+  "description": "FAQ for SEO pages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "Text",
+                "config": {
+                  "label": "Question",
+                  "placeholder": ""
+                }
+              },
+              "answer": {
+                "type": "Text",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
