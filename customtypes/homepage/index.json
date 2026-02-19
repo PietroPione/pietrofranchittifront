@@ -48,6 +48,13 @@
         },
         "type": "Text"
       },
+      "meta_keywords": {
+        "config": {
+          "label": "Meta Keywords (comma separated)",
+          "placeholder": "frontend torino, sviluppo siti web, react developer"
+        },
+        "type": "Text"
+      },
       "meta_image": {
         "config": {
           "constraint": {
