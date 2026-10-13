@@ -1,6 +1,7 @@
 // components/Footer.jsx
 import React from 'react';
 import Link from 'next/link';
+import { CookiePreferencesButton } from './CookieBanner';
 
 const Footer = ({ footerData }) => {
     if (!footerData) {
@@ -38,13 +39,16 @@ const Footer = ({ footerData }) => {
                 <div className='flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between text-14'>
 
                     {footerData.primary?.disclaimer && <p className="italic">{footerData.primary?.disclaimer}</p>}
-                    {footerData.primary?.testo_cookie && footerData.primary?.link_cookie?.url && (
-                        <p>
-                            <Link href={footerData.primary?.link_cookie.url} className="hover:underline">
-                                {footerData.primary?.testo_cookie}{' '}
-                            </Link>
-                        </p>
-                    )}
+                    <div className='flex space-x-4'>
+                        {footerData.primary?.testo_cookie && footerData.primary?.link_cookie?.url && (
+                            <p>
+                                <Link href={footerData.primary?.link_cookie.url} className="hover:underline">
+                                    {footerData.primary?.testo_cookie}{' '}
+                                </Link>
+                            </p>
+                        )}
+                        <CookiePreferencesButton />
+                    </div>
                 </div>
 
                 {footerData.primary?.copyright && <p className="text-12">{footerData.primary?.copyright}</p>}
