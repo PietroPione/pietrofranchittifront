@@ -6,6 +6,7 @@ import Menu from "./components/Menu"; // Importa il componente Menu
 import Footer from "./components/Footer"; // Importa il componente Footer
 import { createClient } from "@/prismicio"; // Importa createClient
 import { ThemeProvider } from "./components/ThemeProvider";
+import CookieBanner from "./components/CookieBanner";
 import {
   defaultDescription,
   defaultKeywords,
@@ -99,6 +100,7 @@ export default async function RootLayout({ children }) {
         <Menu menu={menuData} colori={coloriData?.primary?.colori ?? []} />
         {children}
         <Footer footerData={footerData} />
+        <CookieBanner />
         </ThemeProvider>
       </body>
     </html>
